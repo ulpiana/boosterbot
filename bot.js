@@ -30,12 +30,7 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
     config.boosterExclusiveChannelId
   );
 
-  if (
-    !oldMember.roles.cache.has(
-      newMember.guild.roles.premiumSubscriberRole?.id
-    ) &&
-    newMember.roles.cache.has(newMember.guild.roles.premiumSubscriberRole?.id)
-  ) {
+  if (!oldMember.premiumSince && newMember.premiumSince) {
     const embed = new EmbedBuilder()
       .setAuthor({
         name: "BOOSTED!",
