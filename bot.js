@@ -4,7 +4,7 @@ const {
   Events,
   GatewayIntentBits,
   EmbedBuilder,
-} = require("discord.js");
+} = require("./discord.js");
 const client = new Client({
   partials: ["GUILD_MEMBER"],
   intents: [
