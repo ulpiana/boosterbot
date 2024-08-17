@@ -1,10 +1,11 @@
-require("dotenv")
+require("dotenv").config();
+
 const {
   Client,
   Events,
   GatewayIntentBits,
   EmbedBuilder,
-} = require("./discord.js");
+} = require("discord.js");
 const client = new Client({
   partials: ["GUILD_MEMBER"],
   intents: [
@@ -29,7 +30,7 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
     config.boosterExclusiveChannelId
   );
 
-  // commentg
+  // comment
 
   if (!oldMember.premiumSince && newMember.premiumSince) {
     const embed = new EmbedBuilder()
