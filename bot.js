@@ -30,6 +30,8 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
     config.boosterExclusiveChannelId
   );
 
+  // commentg
+
   if (!oldMember.premiumSince && newMember.premiumSince) {
     const embed = new EmbedBuilder()
       .setAuthor({
