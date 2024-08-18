@@ -91,4 +91,4 @@ client.on(Events.MessageCreate, async (message) => {
   }
 });
 
-client.login(process.env.BOT_TOKEN);
+client.login('MTI3MTI3OTk5MDA1ODY1MTY3OA.GXyBs3.UM91gaTC2T7oxTQTCwqpIRWsyE2GN3zmxU_o5U');
