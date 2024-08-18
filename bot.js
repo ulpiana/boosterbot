@@ -91,5 +91,4 @@ client.on(Events.MessageCreate, async (message) => {
   }
 });
 
-client.login(process.env.BOT_TOKEN)
-.listen(process.env.PORT || 5000);
+client.login(process.env.BOT_TOKEN);
