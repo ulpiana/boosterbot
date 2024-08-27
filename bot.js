@@ -117,6 +117,8 @@ client.on(Events.GuildMemberUpdate, async (message, oldMember, newMember) => {
   const channel = client.channels.cache.get(process.env.GEN_CHANNEL_ID);
 
   if (!hadRole && hasRole) {
+    console.log(hadRole);
+    console.log(hasRole);
     if (channel) {
       const embed = new EmbedBuilder()
         .setAuthor({
