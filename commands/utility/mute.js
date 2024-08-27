@@ -2,7 +2,7 @@ const {
   Client,
   Interaction,
   SlashCommandBuilder,
-  EmbedBuilder,
+  EmbedBuilder, Permissions
 } = require("discord.js");
 
 module.exports = {
@@ -40,9 +40,10 @@ module.exports = {
         "https://media1.tenor.com/m/bT-kVojT-X0AAAAC/adventure-time-fall.gif"
       )
       .setTimestamp()
-      .setFooter({text: 'Boost the server to gain access to exclusive commands and roles!'});
-	// .setFooter({ text: 'Some footer text here', iconURL: 'https://i.imgur.com/AfFp7pu.png' });
-
+      .setFooter({
+        text: "Boost the server to gain access to exclusive commands and roles!",
+      });
+    // .setFooter({ text: 'Some footer text here', iconURL: 'https://i.imgur.com/AfFp7pu.png' });
 
     if (!interaction.isCommand()) return;
 
@@ -71,12 +72,27 @@ module.exports = {
     }
 
     if (
-      !interaction.member.roles.cache.some(
-        (role) => role.name === "Booster"
-      )
+      !interaction.member.roles.cache.some((role) => role.name === "Booster")
     ) {
       await interaction.reply({
         content: "This command is for server boosters only!",
+        ephemeral: true,
+      });
+      return;
+    }
+
+    // if (
+    //   targetUser.member.roles.cache.some(
+    //     (role) => role.name === "Administrator"
+    //   ) ||
+    //   targetUser.member.roles.cache.some((role) => role.name === "Moderator")
+    // ) {
+
+    //targetUser is not a function
+    
+    if (targetUser.roles.cache.some((role) => role.name === "Administrator")) {
+      await interaction.reply({
+        content: "You really thought you could out-mod a mod",
         ephemeral: true,
       });
       return;
@@ -88,14 +104,12 @@ module.exports = {
         await targetUser.timeout(timeoutDuration, embedMessage);
         return;
       }
-
       await targetUser.timeout(timeoutDuration, embedMessage);
       await interaction.reply({ embeds: [newEmbed] });
     } catch (error) {
       console.error(error);
       await interaction.reply({
-        content:
-          "Failed to execute. If this keeps happening, ping PULP.",
+        content: "Failed to execute. If this keeps happening, ping PULP.",
         ephemeral: true,
       });
     }
