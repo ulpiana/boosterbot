@@ -107,48 +107,48 @@ client.on(Events.InteractionCreate, async (interaction, message) => {
   }
 
   // Someone just boosted the server!
-});
-client.on(Events.GuildMemberUpdate, async (message, oldMember, newMember) => {
-  const hadRole = oldMember.roles.cache.some(role => role.name === 'Booster');
-  const hasRole = newMember.roles.cache.some(role => role.name === 'Booster');
-  const boosterExclusiveChannel = client.channels.cache.get(
-    process.env.boosterExclusiveChannelId
-  );
-  const channel = client.channels.cache.get(process.env.GEN_CHANNEL_ID);
+// });
+// client.on(Events.GuildMemberUpdate, async (message, oldMember, newMember) => {
+//   const hadRole = oldMember.roles.cache.some(role => role.name === 'Booster');
+//   const hasRole = newMember.roles.cache.some(role => role.name === 'Booster');
+//   const boosterExclusiveChannel = client.channels.cache.get(
+//     process.env.boosterExclusiveChannelId
+//   );
+//   const channel = client.channels.cache.get(process.env.GEN_CHANNEL_ID);
 
-  if (!hadRole && hasRole) {
-    console.log(hadRole);
-    console.log(hasRole);
-    if (channel) {
-      const embed = new EmbedBuilder()
-        .setAuthor({
-          name: "NEW NIGHTVIBES BOOSTER!",
-          iconURL: "https://cdn3.emoji.gg/emojis/2086-nitro-boost-spin.gif",
-          // iconURL: message.guild.iconURL({ size: 1024 })
-        })
-        .setColor("#f47fff")
-        .setDescription(
-          `>>> Thanks for the boost <\:catfuckyou:1168638350819852418>, ${message.author}! \n Check out this channel made just for you:  ${boosterExclusiveChannel} \n and enjoy the perks!`
-        )
-        .setThumbnail(
-          `${newMember.author.displayAvatarURL({
-            format: "png",
-            dynamic: true,
-          })}`
-        )
-        .addFields({
-          name: "TOTAL BOOSTS:",
-          value: `🥳 ${newMember.guild.premiumSubscriptionCount} Boosts `,
-          inline: false,
-        })
-        .setTimestamp()
-        .setFooter({
-          text: "Boost the server to gain access to exclusive commands and roles!",
-        });
+//   if (!hadRole && hasRole) {
+//     console.log(hadRole);
+//     console.log(hasRole);
+//     if (channel) {
+//       const embed = new EmbedBuilder()
+//         .setAuthor({
+//           name: "NEW NIGHTVIBES BOOSTER!",
+//           iconURL: "https://cdn3.emoji.gg/emojis/2086-nitro-boost-spin.gif",
+//           // iconURL: message.guild.iconURL({ size: 1024 })
+//         })
+//         .setColor("#f47fff")
+//         .setDescription(
+//           `>>> Thanks for the boost <\:catfuckyou:1168638350819852418>, ${message.author}! \n Check out this channel made just for you:  ${boosterExclusiveChannel} \n and enjoy the perks!`
+//         )
+//         .setThumbnail(
+//           `${newMember.author.displayAvatarURL({
+//             format: "png",
+//             dynamic: true,
+//           })}`
+//         )
+//         .addFields({
+//           name: "TOTAL BOOSTS:",
+//           value: `🥳 ${newMember.guild.premiumSubscriptionCount} Boosts `,
+//           inline: false,
+//         })
+//         .setTimestamp()
+//         .setFooter({
+//           text: "Boost the server to gain access to exclusive commands and roles!",
+//         });
 
-      channel.send({ embeds: [embed] });
-    }
-  }
+//       channel.send({ embeds: [embed] });
+//     }
+//   }
 });
 
 client.login(process.env.BOT_TOKEN);
