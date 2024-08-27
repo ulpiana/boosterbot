@@ -1,13 +1,16 @@
 require("dotenv").config();
 
+const fs = require("node:fs");
+const path = require("node:path");
 const {
   Client,
+  Collection,
   Events,
   GatewayIntentBits,
   EmbedBuilder,
 } = require("discord.js");
+
 const client = new Client({
-  partials: ["GUILD_MEMBER"],
   intents: [
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMessages,
@@ -15,78 +18,136 @@ const client = new Client({
     GatewayIntentBits.GuildMembers,
     GatewayIntentBits.GuildPresences,
   ],
+  allowedMentions: { parse: ["users"] },
 });
 
-const config = require("./config.json");
+client.commands = new Collection();
+client.cooldowns = new Collection();
+const foldersPath = path.join(__dirname, "commands");
+const commandFolders = fs.readdirSync(foldersPath);
 const PREFIX = ".";
-const BOOSTER_ROLE_ID = "1174192479239688244"; 
 
-client.on("ready", () => {
-  console.log(`Bot is online, ${client.user.tag}!`);
-});
-
-client.on("guildMemberUpdate", async (oldMember, newMember) => {
-  const boosterExclusiveChannel = client.channels.cache.get(
-    config.boosterExclusiveChannelId
-  );
-
-  // comment
-
-  if (!oldMember.premiumSince && newMember.premiumSince) {
-    const embed = new EmbedBuilder()
-      .setAuthor({
-        name: "BOOSTED!",
-        iconURL: "https://cdn3.emoji.gg/emojis/21025-boosterbadge-rolling.gif",
-      })
-      .setDescription(
-        `>>> Thanks for the boost <\:catfuckyou:1168638350819852418>, ${message.author} \n Check out this channel made just for you: ${boosterExclusiveChannel}`
-      )
-      .setColor("#F47FFF")
-      .setThumbnail(
-        `${message.author.displayAvatarURL({ format: "png", dynamic: true })}`
-      )
-      .setTimestamp();
-
-    message.channel.send({ embeds: [embed] });
+// Get files from commands / utils
+for (const folder of commandFolders) {
+  const commandsPath = path.join(foldersPath, folder);
+  const commandFiles = fs
+    .readdirSync(commandsPath)
+    .filter((file) => file.endsWith(".js"));
+  for (const file of commandFiles) {
+    const filePath = path.join(commandsPath, file);
+    const command = require(filePath);
+    if ("data" in command && "execute" in command) {
+      client.commands.set(command.data.name, command);
+    } else {
+      console.log(
+        `[WARNING] The command at ${filePath} is missing a required "data" or "execute" property.`
+      );
+    }
   }
+}
+
+// Bot's online
+client.once(Events.ClientReady, (readyClient) => {
+  console.log(`Ready! Logged in as ${readyClient.user.tag}`);
 });
 
-client.on(Events.MessageCreate, async (message) => {
-  if (!message.guild || message.author.bot) return;
+// Get registered commands
+client.on(Events.InteractionCreate, async (interaction, message) => {
+  if (!interaction.isChatInputCommand()) return;
+  const command = interaction.client.commands.get(interaction.commandName);
 
-  if (message.content.startsWith(`${PREFIX}fall`)) {
-    const args = message.content.slice(PREFIX.length).trim().split(/ +/);
-    const member = message.mentions.members.first();
-    const customMessage = args.slice(2).join(" ");
-    const fixedMessage = `${message.author} muted ${member.user} for 30 seconds`;
-    const embedMessage = customMessage ? `${fixedMessage}: ${customMessage}` :fixedMessage;
-    
-    if (!member) {
-      return message.reply("Please mention a member to mute.");
-    }
-    if (!message.member.roles.cache.has(BOOSTER_ROLE_ID)) {
-      return message.reply("You do not have permission to use this command.");
-    }
-    if (!member.moderatable) {
-      return message.reply("I cannot mute this user.");
-    }
+  if (!command) {
+    console.error(`No command matching ${interaction.commandName} was found.`);
+    return;
+  }
 
-    if (!message.guild.members.cache.has(member.id)) {
-      return message.reply("User is not in this server.");
+  // Cooldown logics
+  const { cooldowns } = interaction.client;
+
+  if (!cooldowns.has(command.data.name)) {
+    cooldowns.set(command.data.name, new Collection());
+  }
+
+  const now = Date.now();
+  const timestamps = cooldowns.get(command.data.name);
+  const defaultCooldownDuration = 3;
+  const cooldownAmount = (command.cooldown ?? defaultCooldownDuration) * 1_000;
+
+  if (timestamps.has(interaction.user.id)) {
+    const expirationTime = timestamps.get(interaction.user.id) + cooldownAmount;
+
+    if (now < expirationTime) {
+      const expiredTimestamp = Math.round(expirationTime / 1_000);
+      return interaction.reply({
+        content: `You're now in the chillzone. Try using / \`${command.data.name}\` <t:${expiredTimestamp}:R>.`,
+        ephemeral: true,
+      });
     }
-    try {
-      await member.timeout(30000, 'Muted by booster command');
-      const newEmbed = new EmbedBuilder()
-        .setColor("#1b1b1c")
-        .setDescription( `${embedMessage}`)
-        .setImage(
-          "https://media1.tenor.com/m/bT-kVojT-X0AAAAC/adventure-time-fall.gif"
+  }
+  timestamps.set(interaction.user.id, now);
+  setTimeout(() => timestamps.delete(interaction.user.id), cooldownAmount);
+
+  try {
+    await command.execute(interaction);
+  } catch (error) {
+    console.error(error);
+    if (interaction.replied || interaction.deferred) {
+      await interaction.followUp({
+        content: "There was an error while executing this command!",
+        ephemeral: true,
+      });
+    } else {
+      // await interaction.deferReply();
+      // await wait(4_000);
+      await interaction.reply({
+        content: "There was an error while executing this command!",
+        ephemeral: true,
+      });
+    }
+  }
+
+  // Someone just boosted the server!
+});
+client.on(Events.GuildMemberUpdate, async (message, oldMember, newMember) => {
+  const boosterExclusiveChannel = client.channels.cache.get(
+    process.env.boosterExclusiveChannelId
+  );
+  const channel = client.channels.cache.get(process.env.GEN_CHANNEL_ID);
+
+  if (
+    !oldMember.roles.cache.has(
+      newMember.guild.roles.premiumSubscriberRole?.id
+    ) &&
+    newMember.roles.cache.has(newMember.guild.roles.premiumSubscriberRole?.id)
+  ) {
+    if (channel) {
+      const embed = new EmbedBuilder()
+        .setAuthor({
+          name: "NEW NIGHTVIBES BOOSTER!",
+          iconURL: "https://cdn3.emoji.gg/emojis/2086-nitro-boost-spin.gif",
+          // iconURL: message.guild.iconURL({ size: 1024 })
+        })
+        .setColor("#h")
+        .setDescription(
+          `>>> Thanks for the boost <\:catfuckyou:1168638350819852418>, ${message.author}! \n Check out this channel made just for you:  ${boosterExclusiveChannel} \n and enjoy the perks!`
         )
-        .setTimestamp();
-      message.channel.send({ embeds: [newEmbed] });
-    } catch (error) {
-      console.error("Error muting member:", error);
-      message.reply("There was an error trying to mute the member.");
+        .setThumbnail(
+          `${message.author.displayAvatarURL({
+            format: "png",
+            dynamic: true,
+          })}`
+        )
+        .addFields({
+          name: "TOTAL BOOSTS:",
+          value: `🥳 ${message.guild.premiumSubscriptionCount} Boosts `,
+          inline: false,
+        })
+        .setTimestamp()
+        .setFooter({
+          text: "Boost the server to gain access to exclusive commands and roles!",
+        });
+
+      channel.send({ embeds: [embed] });
     }
   }
 });
