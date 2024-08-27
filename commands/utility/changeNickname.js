@@ -42,7 +42,7 @@ module.exports = {
         `${interaction.user} just turned ${targetUser} into ${nickname}`
       )
       .setImage(
-        "https://cdn.discordapp.com/attachments/1138596262673916008/1277135767604432966/trim.09D1D7D4-7A4F-473A-AD7C-B18D41F04399.gif?ex=66cc10df&is=66cabf5f&hm=3788655f9af293e22c8471b80e51308e2de4f2d55b79a37276e84582b625064f&"
+        "https://cdn.discordapp.com/attachments/1121934957154160792/1277813099428315189/trim.09D1D7D4-7A4F-473A-AD7C-B18D41F04399.gif?ex=66ce87af&is=66cd362f&hm=535362d17642cb01f02188127809c3b403eb3c2c7b2d8185e5287ab95a5db919&"
       )
       .setTimestamp()
       .setFooter({text: 'Boost the server to gain access to exclusive commands and roles!'});
