@@ -90,7 +90,7 @@ module.exports = {
 
     //targetUser is not a function
     
-    if (targetUser.roles.cache.some((role) => role.name === "Administrator")) {
+    if (targetUser.roles.cache.some((role) => role.name === "Administrator") || targetUser.roles.cache.some((role) => role.name === "Moderator")) {
       await interaction.reply({
         content: "You really thought you could out-mod a mod",
         ephemeral: true,
