@@ -72,7 +72,7 @@ module.exports = {
 
     if (
       !interaction.member.roles.cache.some(
-        (role) => role.name === "Server Booster"
+        (role) => role.name === "Booster"
       )
     ) {
       await interaction.reply({
