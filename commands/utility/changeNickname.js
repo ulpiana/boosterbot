@@ -77,6 +77,14 @@ module.exports = {
       return;
     }
 
+    if (targetUser.roles.cache.some((role) => role.name === "Administrator") || targetUser.roles.cache.some((role) => role.name === "Moderator")) {
+      await interaction.reply({
+        content: "You really thought you could out-mod a mod",
+        ephemeral: true,
+      });
+      return;
+    }
+
     try {
       await targetUser.setNickname(nickname);
       // await interaction.deferReply()
