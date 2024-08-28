@@ -1,8 +1,6 @@
 const {
-  Client,
-  Interaction,
   SlashCommandBuilder,
-  EmbedBuilder, Permissions
+  EmbedBuilder
 } = require("discord.js");
 
 module.exports = {
@@ -29,7 +27,7 @@ module.exports = {
   async execute(interaction) {
     const targetUser = interaction.options.getMember("user");
     const customMessage = interaction.options.getString("message");
-    const fixedMessage = `${interaction.user} muted ${targetUser} muted  for 30 seconds`;
+    const fixedMessage = `${interaction.user} muted ${targetUser} for 30 seconds`;
     const embedMessage = customMessage
       ? `${fixedMessage}: ${customMessage}`
       : fixedMessage;
@@ -43,7 +41,6 @@ module.exports = {
       .setFooter({
         text: "Boost the server to gain access to exclusive commands and roles!",
       });
-    // .setFooter({ text: 'Some footer text here', iconURL: 'https://i.imgur.com/AfFp7pu.png' });
 
     if (!interaction.isCommand()) return;
 
@@ -80,15 +77,6 @@ module.exports = {
       });
       return;
     }
-
-    // if (
-    //   targetUser.member.roles.cache.some(
-    //     (role) => role.name === "Administrator"
-    //   ) ||
-    //   targetUser.member.roles.cache.some((role) => role.name === "Moderator")
-    // ) {
-
-    //targetUser is not a function
     
     if (targetUser.roles.cache.some((role) => role.name === "Administrator") || targetUser.roles.cache.some((role) => role.name === "Moderator")) {
       await interaction.reply({
