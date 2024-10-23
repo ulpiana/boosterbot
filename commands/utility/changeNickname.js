@@ -45,7 +45,10 @@ module.exports = {
         "https://cdn.discordapp.com/attachments/1121934957154160792/1277813099428315189/trim.09D1D7D4-7A4F-473A-AD7C-B18D41F04399.gif?ex=66ce87af&is=66cd362f&hm=535362d17642cb01f02188127809c3b403eb3c2c7b2d8185e5287ab95a5db919&"
       )
       .setTimestamp()
-      .setFooter({text: 'Boost the server to gain access to exclusive commands and roles!'});
+      .setFooter({
+        text: "Boost the NIGHTVIBES server to gain access to exclusive commands and roles!",
+        iconURL: "https://cdn3.emoji.gg/emojis/2086-nitro-boost-spin.gif",
+      });
 
     if (!interaction.isCommand()) return;
 
@@ -66,9 +69,7 @@ module.exports = {
     }
 
     if (
-      !interaction.member.roles.cache.some(
-        (role) => role.name === "Booster"
-      )
+      !interaction.member.roles.cache.some((role) => role.name === "Booster")
     ) {
       await interaction.reply({
         content: "This command is for server boosters only!",
@@ -77,7 +78,10 @@ module.exports = {
       return;
     }
 
-    if (targetUser.roles.cache.some((role) => role.name === "Administrator") || targetUser.roles.cache.some((role) => role.name === "Moderator")) {
+    if (
+      targetUser.roles.cache.some((role) => role.name === "Administrator") ||
+      targetUser.roles.cache.some((role) => role.name === "Moderator")
+    ) {
       await interaction.reply({
         content: "You really thought you could out-mod a mod",
         ephemeral: true,

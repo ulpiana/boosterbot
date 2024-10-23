@@ -1,0 +1,63 @@
+[
+    {
+        "question": "What is the animal that can be seen somewhere in every episode?",
+        "asnwers": ["snail", "Snail", "a snail", "A snail"],
+        "image": "https://i.imgur.com/7BKtILp.gif"
+    },
+    {
+        "question": "What was Jake’s first Time Room wish?",
+        "asnwers": ["a sandwich", "A sandwich", "A Sandwich", "sandwich", "Sandwich"],
+        "image": "https://i.pinimg.com/originals/ca/fb/6d/cafb6dae16e219767c06151c40743119.gif"
+    },
+    {
+        "question": "Marceline is not a traditional vampire. What does she primarily eat?",
+        "asnwers": ["red", "Red", "Shades of red", "shades of red", "red things", "Red things", "The color red"],
+        "image": "https://i.pinimg.com/originals/90/f9/80/90f980aa40f7bb169baed92055153160.gif"
+    },
+    {
+        "question": "What is the Ice King's real name?",
+        "asnwers": ["Simon Petrikov", "simon petrikov", "Simon petrikov"],
+        "image": "https://imgur.com/i-made-ice-king-gif-VAV7xNe"
+    },
+    {
+        "question": "What food does LSP enjoy?",
+        "asnwers":["baked beans", "Baked Beans", "Baked beans"],
+        "image": "https://49.media.tumblr.com/cd9a42e8f16322071275335e00bfd899/tumblr_o0pqhwgmTi1so18vqo1_1280.gif"
+    },
+    {
+        "question": "What is the full name of Marceline the Vampire Queen's father?",
+        "asnwers":["Hunson Abadeer", "hunson abadeer", "Hunson abadeer"],
+        "image": "https://64.media.tumblr.com/217a2729f20cc23582f4108f3b18b49d/tumblr_os2lw9wib91ua3qmvo1_1280.gif"
+    },
+    {
+        "question": "What genre of stories does Root Beer Guy write?",
+        "asnwers":["Mystery", "mystery", "Mysteries", "mysteries", "Mystery stories", "mystery stories"],
+        "image": "https://64.media.tumblr.com/d8a1355e21dc32c08cb9dce08e591b03/3e56384822911031-5c/s2048x3072/7ba479ce74a3aad670c1dbee50d5ab96bc9bbe58.gifv"
+    },
+    {
+        "question": "Who is Me-Mow trying to kill in hopes of becoming a full Assassin in the Assassin's Guild?",
+        "asnwers":["Wildberry Princess", "wildberry princess"],
+        "image": "https://media.tenor.com/mefISPSH6NcAAAAM/memow-noooo.gif"
+    }
+    ,
+    {
+        "question": " What is Jake's brother's name?",
+        "asnwers":["Jermaine", "jermaine"],
+        "image": "https://i.pinimg.com/originals/17/13/c8/1713c8607621645c8868210dd539e3ec.gif"
+    },
+    {
+        "question": "Where did Bonnie and Neddy come from?",
+        "asnwers":["Bubblegum", "bubblegum", "gum", "Gum", "Mother Gum", "mother gum", "Mother gum"],
+        "image": "https://64.media.tumblr.com/154f60c67b6eaf485b07275d7565bb04/fd8f259b3ae8565f-d4/s1280x1920/14acd5f4e885d6c55b2a555568889fef8e574ff0.gifv"
+    },
+    {
+        "question": "What is the actual title of the song that plays in the end credits of most episodes?",
+        "asnwers":["island song", "Island Song", "the island song", "The island song", "Island song"],
+        "image": "https://64.media.tumblr.com/16ca738b13a066063a962c60d37ae35e/06b703ac241d5964-b3/s500x750/607342abcc7bf64c555e5fe34c160ab360b5f58e.gifv"
+    },
+    {
+        "question": "What are the stories told by Cuber called?",
+        "asnwers":["Grayble", "Graybles", "grayble", "graybles"],
+        "image": "https://64.media.tumblr.com/ce43a925d727a43f57e0326fab1c3d71/fdd78d4318f3f90e-e7/s500x750/afe3e26fed18b9dad2f0e8d8d7acacc2c52dcfcf.gifv"
+    }
+]

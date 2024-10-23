@@ -32,14 +32,15 @@ module.exports = {
       ? `${fixedMessage}: ${customMessage}`
       : fixedMessage;
     const newEmbed = new EmbedBuilder()
-      .setColor("#1b231b")
+      .setColor("#f47fff")
       .setDescription(`${embedMessage}`)
       .setImage(
         "https://media1.tenor.com/m/bT-kVojT-X0AAAAC/adventure-time-fall.gif"
       )
       .setTimestamp()
       .setFooter({
-        text: "Boost the server to gain access to exclusive commands and roles!",
+        text: "Boost the NIGHTVIBES server to gain access to exclusive commands and roles!",
+        iconURL: "https://cdn3.emoji.gg/emojis/2086-nitro-boost-spin.gif"
       });
 
     if (!interaction.isCommand()) return;

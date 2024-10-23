@@ -46,9 +46,83 @@ for (const folder of commandFolders) {
   }
 }
 
+let triviaQuestions = [];
+
+// Load trivia questions from the JSON file
+fs.readFile("atTrivia.json", "utf8", (err, data) => {
+  if (err) {
+    console.error("Could not read trivia.json:", err);
+    return;
+  }
+  triviaQuestions = JSON.parse(data);
+});
+
+function sendTriviaQuestion() {
+  const channel = client.channels.cache.get("945713353186234378"); // currently:general
+
+  if (!channel) {
+    console.error("Channel not found!");
+    return;
+  }
+
+  setInterval((interaction) => {
+    if (triviaQuestions.length === 0) return;
+    const randomIndex = Math.floor(Math.random() * triviaQuestions.length);
+    const trivia = triviaQuestions[randomIndex];
+
+    const embed = new EmbedBuilder()
+      .setAuthor({ name: "GOOD LUCK!" })
+      .setColor("#f47fff")
+      .setTitle("Trivia Question")
+      .setDescription(trivia.question)
+      .setImage(trivia.image)
+      .setTimestamp()
+      .setFooter({
+        text: "Boost the NIGHTVIBES server to gain access to exclusive commands and roles!",
+        iconURL: "https://cdn3.emoji.gg/emojis/2086-nitro-boost-spin.gif",
+      });
+
+    const triviaMsg = channel.send({ embeds: [embed] });
+
+    // answer collector
+    const collectorFilter = response => {
+      return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
+    };
+    
+    // interaction.reply({ content: trivia, fetchReply: true }).then(() => {
+    //   interaction.channel
+    //     .awaitMessages({
+    //       filter: collectorFilter,
+    //       max: 1,
+    //       time: 30_000,
+    //       errors: ["time"],
+    //     })
+    //     .then((collected) => {
+    //       interaction.followUp(
+    //         `${collected.first().author} got the correct answer!`
+    //       );
+    //     })
+    //     .catch((collected) => {
+    //       interaction.followUp("Looks like nobody got the answer this time.");
+    //     });
+    // });
+    //  const collector = channel.createMessageCollector({ filter, time: 21600000 });
+
+    //  collector.on('collect', async(msg) => {
+    //   if(msg.content.toLowerCase() === trivia.answer.toLowerCase()) {
+    //     await channel.send(`Correct! 🎉 The answer is **${trivia.answer}**`)
+    //   } else {
+    //     await channel.send(`Incorrect! The correct answer is **${trivia.answer}**}`)
+    //   }
+    //   collector.stop();
+    //  })
+  }, 21600000);
+}
+
 // Bot's online
 client.once(Events.ClientReady, (readyClient) => {
   console.log(`Ready! Logged in as ${readyClient.user.tag}`);
+  sendTriviaQuestion();
 });
 
 // Get registered commands
@@ -107,48 +181,48 @@ client.on(Events.InteractionCreate, async (interaction, message) => {
   }
 
   // Someone just boosted the server!
-// });
-// client.on(Events.GuildMemberUpdate, async (message, oldMember, newMember) => {
-//   const hadRole = oldMember.roles.cache.some(role => role.name === 'Booster');
-//   const hasRole = newMember.roles.cache.some(role => role.name === 'Booster');
-//   const boosterExclusiveChannel = client.channels.cache.get(
-//     process.env.boosterExclusiveChannelId
-//   );
-//   const channel = client.channels.cache.get(process.env.GEN_CHANNEL_ID);
+  // });
+  // client.on(Events.GuildMemberUpdate, async (message, oldMember, newMember) => {
+  //   const hadRole = oldMember.roles.cache.some(role => role.name === 'Booster');
+  //   const hasRole = newMember.roles.cache.some(role => role.name === 'Booster');
+  //   const boosterExclusiveChannel = client.channels.cache.get(
+  //     process.env.boosterExclusiveChannelId
+  //   );
+  //   const channel = client.channels.cache.get(process.env.GEN_CHANNEL_ID);
 
-//   if (!hadRole && hasRole) {
-//     console.log(hadRole);
-//     console.log(hasRole);
-//     if (channel) {
-//       const embed = new EmbedBuilder()
-//         .setAuthor({
-//           name: "NEW NIGHTVIBES BOOSTER!",
-//           iconURL: "https://cdn3.emoji.gg/emojis/2086-nitro-boost-spin.gif",
-//           // iconURL: message.guild.iconURL({ size: 1024 })
-//         })
-//         .setColor("#f47fff")
-//         .setDescription(
-//           `>>> Thanks for the boost <\:catfuckyou:1168638350819852418>, ${message.author}! \n Check out this channel made just for you:  ${boosterExclusiveChannel} \n and enjoy the perks!`
-//         )
-//         .setThumbnail(
-//           `${newMember.author.displayAvatarURL({
-//             format: "png",
-//             dynamic: true,
-//           })}`
-//         )
-//         .addFields({
-//           name: "TOTAL BOOSTS:",
-//           value: `🥳 ${newMember.guild.premiumSubscriptionCount} Boosts `,
-//           inline: false,
-//         })
-//         .setTimestamp()
-//         .setFooter({
-//           text: "Boost the server to gain access to exclusive commands and roles!",
-//         });
+  //   if (!hadRole && hasRole) {
+  //     console.log(hadRole);
+  //     console.log(hasRole);
+  //     if (channel) {
+  //       const embed = new EmbedBuilder()
+  //         .setAuthor({
+  //           name: "NEW NIGHTVIBES BOOSTER!",
+  //           iconURL: "https://cdn3.emoji.gg/emojis/2086-nitro-boost-spin.gif",
+  //           // iconURL: message.guild.iconURL({ size: 1024 })
+  //         })
+  //         .setColor("#f47fff")
+  //         .setDescription(
+  //           `>>> Thanks for the boost <\:catfuckyou:1168638350819852418>, ${message.author}! \n Check out this channel made just for you:  ${boosterExclusiveChannel} \n and enjoy the perks!`
+  //         )
+  //         .setThumbnail(
+  //           `${newMember.author.displayAvatarURL({
+  //             format: "png",
+  //             dynamic: true,
+  //           })}`
+  //         )
+  //         .addFields({
+  //           name: "TOTAL BOOSTS:",
+  //           value: `🥳 ${newMember.guild.premiumSubscriptionCount} Boosts `,
+  //           inline: false,
+  //         })
+  //         .setTimestamp()
+  //         .setFooter({
+  //           text: "Boost the server to gain access to exclusive commands and roles!",
+  //         });
 
-//       channel.send({ embeds: [embed] });
-//     }
-//   }
+  //       channel.send({ embeds: [embed] });
+  //     }
+  //   }
 });
 
 client.login(process.env.BOT_TOKEN);
