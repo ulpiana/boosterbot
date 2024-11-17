@@ -1,63 +1,248 @@
 [
     {
-        "question": "What is the animal that can be seen somewhere in every episode?",
-        "asnwers": ["snail", "Snail", "a snail", "A snail"],
-        "image": "https://i.imgur.com/7BKtILp.gif"
+        "question": " Who was the original Goblin King?",
+        "answers": [
+            "Xergiok",
+            "xergiok"
+        ],
+        "image": "https://64.media.tumblr.com/3f84510fea29eefb26c90730488ab42b/6a1e5acf68ce49f4-7d/s2048x3072/632bf18e1f67bb235990431d1c2c66e027f766ce.jpg"
     },
     {
-        "question": "What was Jake’s first Time Room wish?",
-        "asnwers": ["a sandwich", "A sandwich", "A Sandwich", "sandwich", "Sandwich"],
-        "image": "https://i.pinimg.com/originals/ca/fb/6d/cafb6dae16e219767c06151c40743119.gif"
+        "question": "What was Finn's original name?",
+        "answers": [
+            "Pen",
+            "pen"
+        ],
+        "image": "https://64.media.tumblr.com/d14fbae929e53229f0c266c0c8555dee/0b76112a21bb581c-1b/s540x810/8362c18ac4aabf093d79e38b00ca2b26304bdcce.gif"
+    },
+    {
+        "question": "What is the animal that can be seen somewhere in every episode?",
+        "answers": [
+            "A snail",
+            "Snail",
+            "snail",
+            "a snail"
+        ],
+        "image": "https://64.media.tumblr.com/192c793847cfceeacc5fb4df35c73cab/a4f1a15492db42ef-0f/s540x810/6e29d2412686382194915d93aace5953650c8939.gif"
     },
     {
         "question": "Marceline is not a traditional vampire. What does she primarily eat?",
-        "asnwers": ["red", "Red", "Shades of red", "shades of red", "red things", "Red things", "The color red"],
-        "image": "https://i.pinimg.com/originals/90/f9/80/90f980aa40f7bb169baed92055153160.gif"
+        "answers": [
+            "Red",
+            "red",
+            "Shades of red",
+            "shades of red",
+            "the color red",
+            "The color red"
+        ],
+        "image": "https://64.media.tumblr.com/36d2d73bd66d77874edbbbd5f604ec54/93a2f00b16991ce7-c4/s400x600/b41022446c74f4cdd12da34fafdaa1aa9ac954d1.gif"
     },
     {
-        "question": "What is the Ice King's real name?",
-        "asnwers": ["Simon Petrikov", "simon petrikov", "Simon petrikov"],
-        "image": "https://imgur.com/i-made-ice-king-gif-VAV7xNe"
+        "question": "Who lives in Jake's viola?",
+        "answers": [
+            "A worm",
+            "Worm",
+            "a worm",
+            "worm",
+            "Shelby",
+            "shelby"
+        ],
+        "image": "https://64.media.tumblr.com/7df83049541cbeeb1873944336693546/b0f6223fb71acbb8-f5/s540x810/1792e85788e6aef3ecf88a8c6051a3ef353dc1ef.gif"
     },
     {
-        "question": "What food does LSP enjoy?",
-        "asnwers":["baked beans", "Baked Beans", "Baked beans"],
-        "image": "https://49.media.tumblr.com/cd9a42e8f16322071275335e00bfd899/tumblr_o0pqhwgmTi1so18vqo1_1280.gif"
+        "question": "What is LSP's favorite food?",
+        "answers": [
+            "Beans",
+            "beans",
+            "baked beans",
+            "Baked beans"
+        ],
+        "image": "https://64.media.tumblr.com/80627f435b132fc56b02acf731d436f8/56792b5999715785-7f/s540x810/577237d4ba1a38d6b5f35c727f2a167fc1b57a31.gif"
     },
     {
         "question": "What is the full name of Marceline the Vampire Queen's father?",
-        "asnwers":["Hunson Abadeer", "hunson abadeer", "Hunson abadeer"],
+        "answers": [
+            "Hunson Abadeer",
+            "Hunson abadeer",
+            "hunson abadeer"
+        ],
         "image": "https://64.media.tumblr.com/217a2729f20cc23582f4108f3b18b49d/tumblr_os2lw9wib91ua3qmvo1_1280.gif"
     },
     {
-        "question": "What genre of stories does Root Beer Guy write?",
-        "asnwers":["Mystery", "mystery", "Mysteries", "mysteries", "Mystery stories", "mystery stories"],
-        "image": "https://64.media.tumblr.com/d8a1355e21dc32c08cb9dce08e591b03/3e56384822911031-5c/s2048x3072/7ba479ce74a3aad670c1dbee50d5ab96bc9bbe58.gifv"
+        "question": "What is Finn's biggest fear?",
+        "answers": [
+            "The ocean",
+            "the ocean",
+            "Ocean",
+            "The Sea",
+            "the sea",
+            "water",
+            "Water"
+        ],
+        "image": "https://64.media.tumblr.com/d94a0c177aaf1456e98a42d752938eb8/c94dbfcb3148c7bd-24/s500x750/f39614866630ace9737942af3484035d42999dc2.gif"
     },
     {
-        "question": "Who is Me-Mow trying to kill in hopes of becoming a full Assassin in the Assassin's Guild?",
-        "asnwers":["Wildberry Princess", "wildberry princess"],
-        "image": "https://media.tenor.com/mefISPSH6NcAAAAM/memow-noooo.gif"
-    }
-    ,
+        "question": "What genre of stories does Root Beer Guy write?",
+        "answers": [
+            "Mystery",
+            "mystery",
+            "Mysteries",
+            "mysteries"
+        ],
+        "image": "https://64.media.tumblr.com/d8a1355e21dc32c08cb9dce08e591b03/3e56384822911031-5c/s640x960/5705649c465f88ccad90006126e7cc2b4f2a00fe.gif"
+    },
     {
-        "question": " What is Jake's brother's name?",
-        "asnwers":["Jermaine", "jermaine"],
-        "image": "https://i.pinimg.com/originals/17/13/c8/1713c8607621645c8868210dd539e3ec.gif"
+        "question": "Who's flame princess' side kick & companion?",
+        "answers": [
+            "Cinnamon Bun",
+            "Cinnamon bun",
+            "cinnamon bun"
+        ],
+        "image": "https://64.media.tumblr.com/b8f405fdef94b812eeef4a911f155131/2dfe234c0c940376-0b/s2048x3072/f159a7e575a48bed4c9594ffe7c3ae4500c05596.jpg"
+    },
+    {
+        "question": "Who is Memow trying to kill in hopes of becoming a full Assassin in the Assassin's Guild?",
+        "answers": [
+            "Wildberry Princess",
+            "Wildberry princess",
+            "wildberry princess"
+        ],
+        "image": "https://64.media.tumblr.com/00defc26e375207883ec02d2adc95276/58f6ce6f8ca04d72-d3/s540x810/28f80f309a0de4d3dc6465c08d06523479bcbf48.gif"
+    },
+    {
+        "question": "What happens to Finn's arm in 'Escape From the Citadel'?",
+        "answers": [
+            "It's ripped off",
+            "it's ripped off",
+            "It's removed",
+            "it's removed",
+            "His arm gets ripped off",
+            "his arm gets ripped off",
+            "It gets ripped off",
+            "it gets ripped off"
+        ],
+        "image": "https://64.media.tumblr.com/e00fa9ee6940e22f9df6cb8397fc2ccd/27efe946744ec381-67/s540x810/769afcdb7623da00bd6f40c980edec0209f1d090.gif"
+    },
+    {
+        "question": "This character lives underground and asked Finn and Jake to help fight off Lub Glubs. Who is it?",
+        "answers": [
+            "Susan strong",
+            "susan strong",
+            "Susan Strong"
+        ],
+        "image": "https://64.media.tumblr.com/ff4b8b536cdedcbc02902ae8ccc58b5b/342b0c03a0b7ad5b-69/s540x810/25345bbc2f5da212ac0cd2809988640535ab22c4.gif"
+    },
+    {
+        "question": "What is the name of Jake's brother?",
+        "answers": [
+            "Jermaine",
+            "jermaine"
+        ],
+        "image": "https://64.media.tumblr.com/ce43a925d727a43f57e0326fab1c3d71/fdd78d4318f3f90e-e7/s500x750/afe3e26fed18b9dad2f0e8d8d7acacc2c52dcfcf.gif"
+    },
+    {
+        "question": "Which company originally passed on Adventure Time before Cartoon Network picked it up?",
+        "answers": [
+            "Nickelodeon",
+            "nickelodeon"
+        ],
+        "image": "https://64.media.tumblr.com/16ca738b13a066063a962c60d37ae35e/06b703ac241d5964-b3/s500x750/607342abcc7bf64c555e5fe34c160ab360b5f58e.gif"
+    },
+    {
+        "question": "Which character does Niki Yang voice besides BMO in Adventure Time?",
+        "answers": [
+            "Lady Rainicorn",
+            "Lady rainicorn",
+            "lady rainicorn"
+        ],
+        "image": "https://64.media.tumblr.com/887036579ace2d6ae5c97b32d9f06dce/bad8d5324f328394-04/s540x810/f114424f72c50dd2e765faddab23cd510116b027.gif"
+    },
+    {
+        "question": " Which miniseries focuses on Marceline and her backstory in Adventure Time?",
+        "answers": [
+            "Stakes",
+            "stakes"
+        ],
+        "image": "https://64.media.tumblr.com/280b77887cdd2ab6688edd4941da681f/247569e989fbea23-90/s250x400/9feedbbdc0b44d2f26f3b4f6d04645546cb06c6c.gif"
+    },
+    {
+        "question": "What are the names of gender-swapped Finn and Jake featured in a spin-off of the same name?",
+        "answers": [
+            "Fionna and cake",
+            "fionna and cake",
+            "Fionna And Cake"
+        ],
+        "image": "https://64.media.tumblr.com/6767d6b8fff29130a390498aae8a1dde/1fa4f1ff7e166e00-03/s540x810/c6077f38ed1f3b59f495ca2127a217bc4bc91b20.gif"
+    },
+    {
+        "question": "What character is shown to be lonesome and alive thousands of years ahead of the original timeline?",
+        "answers": [
+            "Lemonhope",
+            "lemonhope",
+            "Lemon hope",
+            "lemon hope"
+        ],
+        "image": "https://64.media.tumblr.com/edc52e71a1ea5b05ea77b08a6ca4f357/524f5e87bf632c9d-bf/s640x960/a822db6d9815706119efc3649dc115afbbfaa813.gif"
+    },
+    {
+        "question": "Susan Strong lives with a colony of what type of beings?",
+        "answers": [
+            "Fish people",
+            "fish people",
+            "Fish",
+            "fish",
+            "Fish beings",
+            "fish beings"
+        ],
+        "image": "https://i.pinimg.com/564x/1c/8e/e3/1c8ee3044db9120531b8f875fe0fcd37.jpg"
+    },
+    {
+        "question": "What are the numbers on the back of the Enchiridion?",
+        "answers": [
+            "8 13 21",
+            "8, 13, 21"
+        ],
+        "image": "https://64.media.tumblr.com/79fdfc8da2a0d2fb82171d4b43923971/9830a1ed565a0931-4e/s1280x1920/d66e30dfe06a4c980da89e87d0e38f53d9b7ea46.png"
     },
     {
         "question": "Where did Bonnie and Neddy come from?",
-        "asnwers":["Bubblegum", "bubblegum", "gum", "Gum", "Mother Gum", "mother gum", "Mother gum"],
-        "image": "https://64.media.tumblr.com/154f60c67b6eaf485b07275d7565bb04/fd8f259b3ae8565f-d4/s1280x1920/14acd5f4e885d6c55b2a555568889fef8e574ff0.gifv"
+        "answers": [
+            "Mother Gum",
+            "mother gum",
+            "Mother gum",
+            "Bubblegum",
+            "bubblegum"
+        ],
+        "image": "https://64.media.tumblr.com/4183dd971b2be3068615a1a2ec0e70e0/7638233bc5799713-90/s1280x1920/ceb1edace99277a84edf5a54fa07d9203b8d349e.png"
     },
     {
-        "question": "What is the actual title of the song that plays in the end credits of most episodes?",
-        "asnwers":["island song", "Island Song", "the island song", "The island song", "Island song"],
-        "image": "https://64.media.tumblr.com/16ca738b13a066063a962c60d37ae35e/06b703ac241d5964-b3/s500x750/607342abcc7bf64c555e5fe34c160ab360b5f58e.gifv"
+        "question": "What was Jake's first wish in the Time Room?",
+        "answers": [
+            "A sandwich",
+            "Sandwich",
+            "sandwich",
+            "a sandwich"
+        ],
+        "image": "https://64.media.tumblr.com/68f4225ea496fc7cf0d7580d86a50a90/81db18a432c0ae96-db/s500x750/77e89d7fc21c91d8cd4f34db45656b91585a9d46.gif"
     },
     {
-        "question": "What are the stories told by Cuber called?",
-        "asnwers":["Grayble", "Graybles", "grayble", "graybles"],
-        "image": "https://64.media.tumblr.com/ce43a925d727a43f57e0326fab1c3d71/fdd78d4318f3f90e-e7/s500x750/afe3e26fed18b9dad2f0e8d8d7acacc2c52dcfcf.gifv"
+        "question": "What is Lemonhope's full name?",
+        "answers": [
+            "BadLemonNoHope",
+            "Badlemonnohope",
+            "Bad Lemon No Hope",
+            "Bad lemon no hope",
+            "bad lemon no hope"
+        ],
+        "image": "https://static1.colliderimages.com/wordpress/wp-content/uploads/2023/09/lemongrab-feature.jpg"
+    },
+    {
+        "question": "Which character sings the end credits song that plays at the end of most episodes?",
+        "answers": [
+            "The music hole",
+            "The Music Hole",
+            "the music hole"
+        ],
+        "image": "https://64.media.tumblr.com/53869647f10639c25d3bc0ae9b6b1c06/f471dc76738b9360-ab/s500x750/4a7e489a0cbb8f4c14197256ccf01f2eddde7782.gif"
     }
 ]

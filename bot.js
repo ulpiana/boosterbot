@@ -8,6 +8,7 @@ const {
   Events,
   GatewayIntentBits,
   EmbedBuilder,
+  MessageCollector
 } = require("discord.js");
 
 const client = new Client({
@@ -46,7 +47,7 @@ for (const folder of commandFolders) {
   }
 }
 
-let triviaQuestions = [];
+let trivia = null;
 
 // Load trivia questions from the JSON file
 fs.readFile("atTrivia.json", "utf8", (err, data) => {
@@ -65,11 +66,11 @@ function sendTriviaQuestion() {
     return;
   }
 
-  setInterval((interaction) => {
+  setInterval(() => {
     if (triviaQuestions.length === 0) return;
     const randomIndex = Math.floor(Math.random() * triviaQuestions.length);
     const trivia = triviaQuestions[randomIndex];
-
+    
     const embed = new EmbedBuilder()
       .setAuthor({ name: "GOOD LUCK!" })
       .setColor("#f47fff")
@@ -81,42 +82,23 @@ function sendTriviaQuestion() {
         text: "Boost the NIGHTVIBES server to gain access to exclusive commands and roles!",
         iconURL: "https://cdn3.emoji.gg/emojis/2086-nitro-boost-spin.gif",
       });
+      const collectorFilter = response => {
+        return trivia.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
+      };
 
-    const triviaMsg = channel.send({ embeds: [embed] });
 
-    // answer collector
-    const collectorFilter = response => {
-      return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
-    };
+    channel.send({ embeds: [embed], fetchReply: true })
+    .then(() => {
+      channel.awaitMessages({ filter: collectorFilter, max: 1, time: 120_000, errors: ['time'] })
+      .then(collected => {
+        channel.send(`${collected.first().author} got the correct answer!`)
+      })
+      .catch(collected => {
+        channel.send('Looks like nobody got the answer this time.');
+      })
     
-    // interaction.reply({ content: trivia, fetchReply: true }).then(() => {
-    //   interaction.channel
-    //     .awaitMessages({
-    //       filter: collectorFilter,
-    //       max: 1,
-    //       time: 30_000,
-    //       errors: ["time"],
-    //     })
-    //     .then((collected) => {
-    //       interaction.followUp(
-    //         `${collected.first().author} got the correct answer!`
-    //       );
-    //     })
-    //     .catch((collected) => {
-    //       interaction.followUp("Looks like nobody got the answer this time.");
-    //     });
-    // });
-    //  const collector = channel.createMessageCollector({ filter, time: 21600000 });
-
-    //  collector.on('collect', async(msg) => {
-    //   if(msg.content.toLowerCase() === trivia.answer.toLowerCase()) {
-    //     await channel.send(`Correct! 🎉 The answer is **${trivia.answer}**`)
-    //   } else {
-    //     await channel.send(`Incorrect! The correct answer is **${trivia.answer}**}`)
-    //   }
-    //   collector.stop();
-    //  })
-  }, 21600000);
+    })
+  }, 25_200_000);
 }
 
 // Bot's online

@@ -31,7 +31,7 @@ module.exports = {
     const embedMessage = customMessage
       ? `${fixedMessage}: ${customMessage}`
       : fixedMessage;
-    const newEmbed = new EmbedBuilder()
+    const embed = new EmbedBuilder()
       .setColor("#f47fff")
       .setDescription(`${embedMessage}`)
       .setImage(
@@ -94,7 +94,7 @@ module.exports = {
         return;
       }
       await targetUser.timeout(timeoutDuration, embedMessage);
-      await interaction.reply({ embeds: [newEmbed] });
+      await interaction.reply({ embeds: [embed] });
     } catch (error) {
       console.error(error);
       await interaction.reply({
