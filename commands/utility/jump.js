@@ -22,10 +22,11 @@
 //             return interaction.reply({ content: 'Please mention a user to jump!', ephemeral: true });
 //         }
 
+// 		console.log(user);
 // 		const initialEmbed = new EmbedBuilder()
 // 		.setColor("#f47fff")
 // 		.setAuthor({ name: "JUMP THIS MF 🗣️🗣️🗣️🗣️" })
-// 		.setTitle(`${user} is jumping ${targetUser.user}! You have 30 seconds to join in!`)
+// 		.setTitle(`${user.username} is jumping ${targetUser.user}! You have 30 seconds to join in!`)
 // 		.setDescription("test")
 // 		.setTimestamp()
 		
@@ -42,23 +43,25 @@
 // 		const collector = message.createMessageComponentCollector({filter, time: 30_000})
 
 // 		let participants = [];
-// 		let totalTimeout = 15; 
+// 		let totalTimeout = 15;
+
 
 // 		collector.on('collect', i => {
 // 			participants.push(i.user);
-// 			i.reply({ content: `You've joined the jump!`, ephemeral: true });
-// 			const totalTimeout = Math.min(15 * participants.length, 60); 
-// 			targetUser.timeout(totalTimeout * 1000, `Jumped by ${participants.length} users.`);
+// 			i.reply({ content: `Joined!`, ephemeral: true });
+			
 // 		})
 
 // 		collector.on('end', collected => {
+// 			const totalTimeout = Math.min(15 * participants.length, 60); 
 // 			const participantsList = participants.map(p => p.username).join(', ') || 'no one';
+// 			targetUser.timeout(totalTimeout * 1000, `Jumped by ${participants.length} users.`);
 // 			 const finalTimeout = Math.max(totalTimeout, 15); // Ensure at least 15 seconds
-			
+
 // 			const jumpedEmbed = new EmbedBuilder()
 // 				.setColor("#f47fff")
-// 				.setTitle(`${user.user} just jumped ${targetUser.user} and ${participantsList} joined in!`)
-// 				.setDescription(`${targetUser.user} has been muted for ${totalTimeout} seconds.`)
+// 				.setTitle(`${user} just jumped ${targetUser.user} and ${participantsList} joined in!`)
+// 				.setDescription(`${targetUser.user} has been muted for ${finalTimeout}   seconds.`)
 // 			interaction.followUp({ embeds: [jumpedEmbed], components: [] });
 // 			targetUser.timeout(finalTimeout * 1000, `Jumped by ${participants.length} users.`);
 // 		})

@@ -58,8 +58,8 @@ fs.readFile("atTrivia.json", "utf8", (err, data) => {
   triviaQuestions = JSON.parse(data);
 });
 
-function sendTriviaQuestion() {
-  const channel = client.channels.cache.get("945713353186234378"); // currently:general
+function sendTriviaQuestion(message) {
+  const channel = client.channels.cache.get("945713353186234378"); // currently: nv general
 
   if (!channel) {
     console.error("Channel not found!");
@@ -72,33 +72,47 @@ function sendTriviaQuestion() {
     const trivia = triviaQuestions[randomIndex];
     
     const embed = new EmbedBuilder()
-      .setAuthor({ name: "GOOD LUCK!" })
+      .setAuthor({ name: "GOOD LUCK" })
       .setColor("#f47fff")
-      .setTitle("Trivia Question")
       .setDescription(trivia.question)
+      .addFields({ name: 'Difficulty level: ', value: trivia.level, inline: true })
       .setImage(trivia.image)
       .setTimestamp()
       .setFooter({
         text: "Boost the NIGHTVIBES server to gain access to exclusive commands and roles!",
         iconURL: "https://cdn3.emoji.gg/emojis/2086-nitro-boost-spin.gif",
       });
+
+      const answerEmbed = new EmbedBuilder()
+      .setColor("#59a694")
+      .setTimestamp()
+      .setFooter({
+        text: "Thanks for answering!",
+      });
+
+    
       const collectorFilter = response => {
         return trivia.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
       };
 
 
     channel.send({ embeds: [embed], fetchReply: true })
-    .then(() => {
-      channel.awaitMessages({ filter: collectorFilter, max: 1, time: 120_000, errors: ['time'] })
+    .then(sentMessage => {
+      channel.awaitMessages({ filter: collectorFilter, max: 1, time: 420_000, errors: ['time'] })
       .then(collected => {
-        channel.send(`${collected.first().author} got the correct answer!`)
+        sentMessage.edit({
+          embeds: [answerEmbed.setDescription(`${collected.first().author} got the correct answer! 🎉`)]
+        });
       })
-      .catch(collected => {
-        channel.send('Looks like nobody got the answer this time.');
+      .catch(() => {
+        sentMessage.edit({
+          embeds: [answerEmbed.setDescription("Time's up! No one got the correct answer.").setFooter({text: "Try again next time :/"}).setColor("#ba1e36")],
+        });
       })
     
     })
-  }, 25_200_000);
+  }, 25_200_000 ); //  7 hrs
+
 }
 
 // Bot's online
@@ -161,50 +175,6 @@ client.on(Events.InteractionCreate, async (interaction, message) => {
       });
     }
   }
-
-  // Someone just boosted the server!
-  // });
-  // client.on(Events.GuildMemberUpdate, async (message, oldMember, newMember) => {
-  //   const hadRole = oldMember.roles.cache.some(role => role.name === 'Booster');
-  //   const hasRole = newMember.roles.cache.some(role => role.name === 'Booster');
-  //   const boosterExclusiveChannel = client.channels.cache.get(
-  //     process.env.boosterExclusiveChannelId
-  //   );
-  //   const channel = client.channels.cache.get(process.env.GEN_CHANNEL_ID);
-
-  //   if (!hadRole && hasRole) {
-  //     console.log(hadRole);
-  //     console.log(hasRole);
-  //     if (channel) {
-  //       const embed = new EmbedBuilder()
-  //         .setAuthor({
-  //           name: "NEW NIGHTVIBES BOOSTER!",
-  //           iconURL: "https://cdn3.emoji.gg/emojis/2086-nitro-boost-spin.gif",
-  //           // iconURL: message.guild.iconURL({ size: 1024 })
-  //         })
-  //         .setColor("#f47fff")
-  //         .setDescription(
-  //           `>>> Thanks for the boost <\:catfuckyou:1168638350819852418>, ${message.author}! \n Check out this channel made just for you:  ${boosterExclusiveChannel} \n and enjoy the perks!`
-  //         )
-  //         .setThumbnail(
-  //           `${newMember.author.displayAvatarURL({
-  //             format: "png",
-  //             dynamic: true,
-  //           })}`
-  //         )
-  //         .addFields({
-  //           name: "TOTAL BOOSTS:",
-  //           value: `🥳 ${newMember.guild.premiumSubscriptionCount} Boosts `,
-  //           inline: false,
-  //         })
-  //         .setTimestamp()
-  //         .setFooter({
-  //           text: "Boost the server to gain access to exclusive commands and roles!",
-  //         });
-
-  //       channel.send({ embeds: [embed] });
-  //     }
-  //   }
 });
 
 client.login(process.env.BOT_TOKEN);
