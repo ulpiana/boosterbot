@@ -89,10 +89,6 @@ module.exports = {
 
     try {
       const timeoutDuration = 30 * 1000;
-      if (targetUser.isCommunicationDisabled()) {
-        await targetUser.timeout(timeoutDuration, embedMessage);
-        return;
-      }
       await targetUser.timeout(timeoutDuration, embedMessage);
       await interaction.reply({ embeds: [embed] });
     } catch (error) {

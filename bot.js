@@ -98,7 +98,7 @@ function sendTriviaQuestion(message) {
 
     channel.send({ embeds: [embed], fetchReply: true })
     .then(sentMessage => {
-      channel.awaitMessages({ filter: collectorFilter, max: 1, time: 420_000, errors: ['time'] })
+      channel.awaitMessages({ filter: collectorFilter, max: 1, time: 1_200_000, errors: ['time'] })
       .then(collected => {
         sentMessage.edit({
           embeds: [answerEmbed.setDescription(`${collected.first().author} got the correct answer! 🎉`)]
