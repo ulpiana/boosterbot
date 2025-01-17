@@ -18,7 +18,8 @@ module.exports = {
         .setDescription("Choose the following names:")
         .setRequired(true)
         .addChoices(
-          { name: "MathematicalUser", value: "MathematicalUser" },
+          { name: "i need to touch grass", value: "i need to touch grass" },
+          { name: "mathematical user", value: "mathematical user" },
           { name: "iShouldBeBanned", value: "iShouldBeBanned" },
           { name: "Mods, ban me pls", value: "Mods, ban me pls" },
           { name: "What The Lump?", value: "What The Lump?" },
@@ -26,10 +27,10 @@ module.exports = {
           { name: "NumberOneBooster", value: "NumberOneBooster" },
           { name: "BoostNightVibes", value: "BoostNightVibes" },
           { name: "ImTotallyBuns", value: "ImTotallyBuns" },
-          {
-            name: "CoolestAdventureTimeServerFr",
-            value: "CoolestAdventureTimeServerFr",
-          }
+          { name: "Snail", value: "Snail" },
+          { name: "i love being muted!", value: "i love being muted!" },
+          { name: "I'M A BOT!", value: "I'M A BOT!" },
+          { name: "NPC!", value: "NPC!" },
         )
     ),
 
@@ -37,7 +38,7 @@ module.exports = {
     const targetUser = interaction.options.getMember("user");
     const nickname = interaction.options.getString("nickname");
     const newEmbed = new EmbedBuilder()
-      .setColor("#f47fff")
+      .setColor("#63bda4")
       .setDescription(
         `${interaction.user} just turned ${targetUser} into ${nickname}`
       )

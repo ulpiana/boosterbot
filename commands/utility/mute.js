@@ -4,7 +4,7 @@ const {
 } = require("discord.js");
 
 module.exports = {
-  cooldown: 100,
+  cooldown: 500,
   data: new SlashCommandBuilder()
     .setName("fall")
     .setDescription("Mute another member for 30 seconds.")
@@ -29,10 +29,10 @@ module.exports = {
     const customMessage = interaction.options.getString("message");
     const fixedMessage = `${interaction.user} muted ${targetUser} for 30 seconds`;
     const embedMessage = customMessage
-      ? `${fixedMessage}: ${customMessage}`
+      ? `${fixedMessage} \n \n "${customMessage}"`
       : fixedMessage;
     const embed = new EmbedBuilder()
-      .setColor("#f47fff")
+      .setColor("9bd5ea")
       .setDescription(`${embedMessage}`)
       .setImage(
         "https://media1.tenor.com/m/bT-kVojT-X0AAAAC/adventure-time-fall.gif"
@@ -43,7 +43,7 @@ module.exports = {
         iconURL: "https://cdn3.emoji.gg/emojis/2086-nitro-boost-spin.gif"
       });
 
-    if (!interaction.isCommand()) return;
+      if (!interaction.isCommand()) return;
 
     if (!targetUser) {
       await interaction.reply({

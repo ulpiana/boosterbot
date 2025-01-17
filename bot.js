@@ -8,7 +8,10 @@ const {
   Events,
   GatewayIntentBits,
   EmbedBuilder,
-  MessageCollector
+  ActionRowBuilder,
+  ButtonBuilder,
+  ButtonStyle,
+  ActivityType
 } = require("discord.js");
 
 const client = new Client({
@@ -26,7 +29,6 @@ client.commands = new Collection();
 client.cooldowns = new Collection();
 const foldersPath = path.join(__dirname, "commands");
 const commandFolders = fs.readdirSync(foldersPath);
-const PREFIX = ".";
 
 // Get files from commands / utils
 for (const folder of commandFolders) {
@@ -47,8 +49,6 @@ for (const folder of commandFolders) {
   }
 }
 
-let trivia = null;
-
 // Load trivia questions from the JSON file
 fs.readFile("atTrivia.json", "utf8", (err, data) => {
   if (err) {
@@ -58,67 +58,133 @@ fs.readFile("atTrivia.json", "utf8", (err, data) => {
   triviaQuestions = JSON.parse(data);
 });
 
-function sendTriviaQuestion(message) {
-  const channel = client.channels.cache.get("945713353186234378"); // currently: nv general
-
-  if (!channel) {
-    console.error("Channel not found!");
-    return;
+// function to shuffle the options
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]]; // Swap elements
   }
-
-  setInterval(() => {
-    if (triviaQuestions.length === 0) return;
-    const randomIndex = Math.floor(Math.random() * triviaQuestions.length);
-    const trivia = triviaQuestions[randomIndex];
-    
-    const embed = new EmbedBuilder()
-      .setAuthor({ name: "GOOD LUCK" })
-      .setColor("#f47fff")
-      .setDescription(trivia.question)
-      .addFields({ name: 'Difficulty level: ', value: trivia.level, inline: true })
-      .setImage(trivia.image)
-      .setTimestamp()
-      .setFooter({
-        text: "Boost the NIGHTVIBES server to gain access to exclusive commands and roles!",
-        iconURL: "https://cdn3.emoji.gg/emojis/2086-nitro-boost-spin.gif",
-      });
-
-      const answerEmbed = new EmbedBuilder()
-      .setColor("#59a694")
-      .setTimestamp()
-      .setFooter({
-        text: "Thanks for answering!",
-      });
-
-    
-      const collectorFilter = response => {
-        return trivia.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
-      };
-
-
-    channel.send({ embeds: [embed], fetchReply: true })
-    .then(sentMessage => {
-      channel.awaitMessages({ filter: collectorFilter, max: 1, time: 1_200_000, errors: ['time'] })
-      .then(collected => {
-        sentMessage.edit({
-          embeds: [answerEmbed.setDescription(`${collected.first().author} got the correct answer! 🎉`)]
-        });
-      })
-      .catch(() => {
-        sentMessage.edit({
-          embeds: [answerEmbed.setDescription("Time's up! No one got the correct answer.").setFooter({text: "Try again next time :/"}).setColor("#ba1e36")],
-        });
-      })
-    
-    })
-  }, 25_200_000 ); //  7 hrs
-
 }
+
+async function sendTriviaQuestion() {
+  const channel = client.channels.cache.get("945713322051924028"); // currently: NV general
+
+  if (triviaQuestions.length === 0) return;
+  const randomIndex = Math.floor(Math.random() * triviaQuestions.length);
+  const trivia = triviaQuestions[randomIndex];
+
+  const questionEmbed = new EmbedBuilder()
+  .setAuthor({ name: "GOOD LUCK" })
+  .setColor("#ffba1e")
+  .setDescription(trivia.question)
+  .setImage(trivia.image)
+  .setTimestamp()
+  .setFooter({
+    text: "Boost the NIGHTVIBES server to gain access to exclusive commands and roles!",
+    iconURL: "https://cdn3.emoji.gg/emojis/2086-nitro-boost-spin.gif",
+  });
+
+  let answered = false; 
+
+  const options = [
+    { label: trivia.option1, value: "option1" },
+    { label: trivia.option2, value: "option2" },
+    { label: trivia.option3, value: "option3" },
+  ];
+
+  shuffleArray(options);
+
+  const row = new ActionRowBuilder().addComponents(
+    options.map((option) =>
+      new ButtonBuilder()
+        .setCustomId(option.value)
+        .setLabel(option.label)
+        .setStyle(ButtonStyle.Primary)
+    )
+  );
+
+  const correctOption = trivia.correctAnswer;
+  const correctAnswer = options.find(
+    (option) => option.label === correctOption
+  ).value;
+
+  const answerEmbed = new EmbedBuilder()
+  .setColor("#59a694")
+  .setTimestamp()
+  .setFooter({
+    text: "Thanks for answering!",
+  });
+
+  const sentMessage = await channel.send({
+    embeds: [questionEmbed],
+    components: [row],
+    withResponse: true,
+  });
+
+  const collectorFilter = (i) => i.isButton();
+
+  const collector = channel.createMessageComponentCollector({
+    filter: collectorFilter,
+    time: 1_200_000, // 20 minutes
+  });
+  collector.on("collect", async (interaction) => {
+    const userAnswer = interaction.customId;
+
+    if (userAnswer === correctAnswer) {
+      answered = true;
+      await interaction.update({
+        embeds: [
+          answerEmbed
+            .setAuthor({ name: "WOO-HOO!" })
+            .setDescription(`${interaction.user} got the correct answer! <:jake_exclamation:1290871949186039848>`),
+        ],
+        components: [],
+      });
+      collector.stop();
+    } else if (userAnswer !== correctAnswer) {
+      answered = true;
+      const member = await interaction.guild.members.fetch(interaction.user.id);
+  
+      // console.log(interaction.user);
+      await member.timeout(5_000);
+      await interaction.update({
+        embeds: [
+          answerEmbed
+            .setAuthor({ name: "WOMP WOMP" })
+            .setDescription(`${interaction.user} got the ANSWER WRONG! <:finn_uncomfy:959253867923664987>`)
+            .setColor("#ba1e36")
+            .setFooter({text: "They've been muted for 5 seconds :/"}),
+        ],
+        components: [],
+      });
+      collector.stop();
+    }
+  });
+
+  collector.on("end", async (reason) => {
+    if (!answered && reason !== 'time') {
+      await sentMessage.edit({
+        embeds: [
+          answerEmbed
+          .setAuthor({name: "TIME'S UP!"})
+          .setDescription("Looks like no one answered in time ")
+          .setFooter({text: "Try again next time :/"})
+          .setColor("#ffba1e"),
+        ],
+        components: [],
+      });
+    }
+  });
+};
 
 // Bot's online
 client.once(Events.ClientReady, (readyClient) => {
   console.log(`Ready! Logged in as ${readyClient.user.tag}`);
-  sendTriviaQuestion();
+  client.user.setActivity('Return to the Nightosphere', { type: ActivityType.Watching });
+  setInterval(async () => {
+    await sendTriviaQuestion();
+}, 25_200_000);    //  7 hrs = 25_200_000
+
 });
 
 // Get registered commands
@@ -143,8 +209,9 @@ client.on(Events.InteractionCreate, async (interaction, message) => {
   const defaultCooldownDuration = 3;
   const cooldownAmount = (command.cooldown ?? defaultCooldownDuration) * 1_000;
 
-  if (timestamps.has(interaction.user.id)) {
-    const expirationTime = timestamps.get(interaction.user.id) + cooldownAmount;
+  if (timestamps.has(interaction.member.id)) {
+    const expirationTime =
+      timestamps.get(interaction.member.id) + cooldownAmount;
 
     if (now < expirationTime) {
       const expiredTimestamp = Math.round(expirationTime / 1_000);
