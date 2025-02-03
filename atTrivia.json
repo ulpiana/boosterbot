@@ -297,14 +297,6 @@
         "image": "https://static.wikia.nocookie.net/adventuretimewithfinnandjake/images/3/32/Titlecard_S4E5_returntothenightosphere.png/revision/latest?cb=20210501174148"
     },
     {
-        "question": "Which historical figure can be seen in a picture with Hunson Abadeer in 'Return to the Nightosphere?'",
-        "option1": "Billy",
-        "option2": "Abraham Lincoln",
-        "option3": "George Washington",
-        "correctAnswer": "Abraham Lincoln",
-        "image": "https://static.wikia.nocookie.net/adventuretimewithfinnandjake/images/3/32/Titlecard_S4E5_returntothenightosphere.png/revision/latest?cb=20210501174148"
-    },
-    {
         "question": "When Hunson Abadeer says: 'by far, the most evil thing I've encountered', which character's he saying it about?",
         "option1": "The Lich",
         "option2": "Gunter",
@@ -319,6 +311,68 @@
         "option3": "Jake",
         "correctAnswer": "Gunter",
         "image": "https://64.media.tumblr.com/13fca9c61047400797805bdc35d62c86/216e773be9759657-dd/s640x960/32ec80028a9bad650c32941545e8be7f91a7bd22.png"
+    },
+    {
+        "question": "What is Finn's favorite color?'",
+        "option1": "Baby blue 'boy style'",
+        "option2": "Orange",
+        "option3": "White",
+        "correctAnswer": "Baby blue 'boy style'",
+        "image": "https://64.media.tumblr.com/6202b1d838e00fb51fef77a98777818f/ac333163f6cce8a7-aa/s1280x1920/e01701324c6b95ec610854b043f5c131882df446.png"
+    },
+    {
+        "question": "Who is Finn's first and former girlfriend?",
+        "option1": "Princess Bubblegum",
+        "option2": "Flame Princess",
+        "option3": "Wildberry Princess",
+        "correctAnswer": "Flame Princess",
+        "image": "https://64.media.tumblr.com/fd8420a7ee0e185d16b2819cbbce9b3c/74f3370413953e97-41/s640x960/6ce17155d1fb59ace0b5ef0c35f5c6454ec4bab5.png"
+    },
+    {
+        "question": "What is discovered to have been one of Finn's past lives?",
+        "option1": "A Rock",
+        "option2": "A Patch of Grass",
+        "option3": "A Comet",
+        "correctAnswer": "A Comet",
+        "image": "https://64.media.tumblr.com/2181679d07a364f8084279eb63442ba4/529ae7e213ed1043-90/s2048x3072/a2d4a65bf118def5aa4e83f2db6670931f2fe313.png"
+    },
+    {
+        "question": "Which character (at least to some extent) is red-green colorblind?",
+        "option1": "Jake",
+        "option2": "Finn",
+        "option3": "Ice King",
+        "correctAnswer": "Finn",
+        "image": "https://64.media.tumblr.com/604a5052e77f7201bb226a214a8001db/49a305e933544fe4-6b/s2048x3072/9f63f130401d8408ef7c1c8c347234a7fa203726.jpg"
+    },
+    {
+        "question": "How many ex-husbands does Tree Trunks have?",
+        "option1": "2",
+        "option2": "3",
+        "option3": "4",
+        "correctAnswer": "3",
+        "image": "https://64.media.tumblr.com/3856c18db72c1907a68207d25ee8839a/ac333163f6cce8a7-09/s1280x1920/1709bfa7d7082ac18766e13eb1161b9a2eac86d0.png"
+    },
+    {
+        "question": "In 'The Suitor,' one of the Gumball Guardians refers to a character as the 'Dark One', who are they referring to?'",
+        "option1": "Gunter",
+        "option2": "GOLB",
+        "option3": "Peppermint Butler",
+        "correctAnswer": "Peppermint Butler",
+        "image": "https://64.media.tumblr.com/64e41f15c58baf628d8292aff5d49389/ac333163f6cce8a7-0c/s1280x1920/60a08978e05b53381c3bd2c093e90b0489b45175.png"
+    },
+    {
+        "question": "What is Peppermint Butler's gender-swapped character in Fionna and Cake?'",
+        "option1": "Candy Butler",
+        "option2": "Butterscotch Butler",
+        "option3": "Spearmint Butler",
+        "correctAnswer": "Butterscotch Butler",
+        "image": "https://64.media.tumblr.com/dfbcee48b633b1f74e1a7fefda089798/30c0f1bee912def6-d8/s1280x1920/1607cd3f0635d68340de67770b8d772dbcc44b48.png"
     }
+
+
+
+
+
+
 ]
 
