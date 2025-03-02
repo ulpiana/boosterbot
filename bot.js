@@ -67,7 +67,7 @@ function shuffleArray(array) {
 }
 
 async function sendTriviaQuestion() {
-  const channel = client.channels.cache.get("1138596262673916008"); // currently: emotes general
+  const channel = client.channels.cache.get("945713353186234378"); // currently: NV general
 
   if (triviaQuestions.length === 0) return;
   const randomIndex = Math.floor(Math.random() * triviaQuestions.length);
