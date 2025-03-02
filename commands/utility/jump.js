@@ -135,7 +135,7 @@ module.exports = {
           participants.push(user);
         }
 
-        let timeout = Math.min(15_000 * participants.length, 60_000);
+        let timeout = Math.min(15_000 * participants.length, 600_000);
 
         const filteredParticipants = participants.filter(
           (p) => p.id !== user.id

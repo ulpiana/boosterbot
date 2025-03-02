@@ -1,252 +1,197 @@
+
+
 [
     {
-        "question": " Who was the original Goblin King?",
-        "option1": "Xergiok",
-        "option2": "Finn",
-        "option3": "Whisper Dan",
-        "correctAnswer": "Xergiok",
-        "image": "https://64.media.tumblr.com/3f84510fea29eefb26c90730488ab42b/6a1e5acf68ce49f4-7d/s2048x3072/632bf18e1f67bb235990431d1c2c66e027f766ce.jpg"
+        "question": "This character can vomit rainbows, as seen in the 'The Monster'",
+        "option1": "Lumpy Space Princess",
+        "option2": "Jake",
+        "option3": "Lady Rainicorn",
+        "correctAnswer": "Lumpy Space Princess",
+        "image": "https://64.media.tumblr.com/289cf803f89091e8e8b36c9877758506/a50ec6f14cf1a5ef-25/s540x810/5d72222f6feb9eda864d6dd950de77353ead76cb.gif"
     },
     {
-        "question": "What was Finn's original name?",
-        "option1": "Pen",
-        "option2": "Finn",
-        "option3": "Human boy",
-        "correctAnswer": "Pen",
-        "image": "https://64.media.tumblr.com/d14fbae929e53229f0c266c0c8555dee/0b76112a21bb581c-1b/s540x810/8362c18ac4aabf093d79e38b00ca2b26304bdcce.gif"
-    },
-    {
-        "question": "What is the animal that can be seen somewhere in every episode?",
-        "option1": "A snail",
-        "option2": "A skeleton",
-        "option3": "Shelby",
-        "correctAnswer": "A snail",
-        "image": "https://64.media.tumblr.com/192c793847cfceeacc5fb4df35c73cab/a4f1a15492db42ef-0f/s540x810/6e29d2412686382194915d93aace5953650c8939.gif"
-    },
-    {
-        "question": "Marceline is not a traditional vampire. What does she primarily eat?",
-        "option1": "Blood",
-        "option2": "Apples",
-        "option3": "The color red",
-        "correctAnswer": "The color red",
-        "image": "https://64.media.tumblr.com/36d2d73bd66d77874edbbbd5f604ec54/93a2f00b16991ce7-c4/s400x600/b41022446c74f4cdd12da34fafdaa1aa9ac954d1.gif"
-    },
-    {
-        "question": "Who lives in Jake's viola?",
-        "option1": "Nobody",
-        "option2": "Shelby",
-        "option3": "A snail",
-        "correctAnswer": "Shelby",
-        "image": "https://64.media.tumblr.com/7df83049541cbeeb1873944336693546/b0f6223fb71acbb8-f5/s540x810/1792e85788e6aef3ecf88a8c6051a3ef353dc1ef.gif"
-    },
-    {
-        "question": "What is LSP's favorite food?",
-        "option1": "Candy",
-        "option2": "Beans",
-        "option3": "Fries",
-        "correctAnswer": "Beans",
-        "image": "https://64.media.tumblr.com/80627f435b132fc56b02acf731d436f8/56792b5999715785-7f/s540x810/577237d4ba1a38d6b5f35c727f2a167fc1b57a31.gif"
-    },
-    {
-        "question": "What is the full name of Marceline the Vampire Queen's father?",
-        "option1": "Hunson Abadeer",
-        "option2": "Hudson Abadeer",
-        "option3": "Humson Adadeer",
-        "correctAnswer": "Hunson Abadeer",
-        "funFact": "Hunson Abadeer said in The Adventure Time Encyclopædia that if he was to choose a best friend, he would choose Starchie because even if he is not evil, he is a grave digger and if Hunson found he made a mistake, he would easily have him destroyed once he finds someone more compatilble. ",
-        "image": "https://64.media.tumblr.com/217a2729f20cc23582f4108f3b18b49d/tumblr_os2lw9wib91ua3qmvo1_1280.gif"
-    },
-    {
-        "question": "What is Finn's biggest fear?",
-        "option1": "The dark",
-        "option2": "The Lich",
-        "option3": "The ocean",
-        "correctAnswer": "The ocean",
+        "question": "This character plays the banjo",
+        "option1": "Jake",
+        "option2": "Ice King",
+        "option3": "Prismo",
+        "correctAnswer": "Prismo",
         "image": "https://64.media.tumblr.com/d94a0c177aaf1456e98a42d752938eb8/c94dbfcb3148c7bd-24/s500x750/f39614866630ace9737942af3484035d42999dc2.gif"
     },
     {
-        "question": "What genre of stories does Root Beer Guy write?",
-        "option1": "Romance",
-        "option2": "Mystery",
-        "option3": "Thriller",
-        "correctAnswer": "Mystery",
-        "image": "https://64.media.tumblr.com/d8a1355e21dc32c08cb9dce08e591b03/3e56384822911031-5c/s640x960/5705649c465f88ccad90006126e7cc2b4f2a00fe.gif"
+        "question": "This character knows Morse code",
+        "option1": "Cake",
+        "option2": "Marceline",
+        "option3": "Princess Bubblegum",
+        "correctAnswer": "Cake",
+        "image": "https://64.media.tumblr.com/0c64e598d42a3767f6e3865b108c9c0a/d089802ceebd84bc-97/s540x810/90602a9b23a3511118ec886f9617bc6ca9241c40.gif"
     },
     {
-        "question": "Who's Flame Princess' side kick & companion?",
-        "option1": "Cinnamon Bun",
-        "option2": "Starchie",
-        "option3": "Ice King",
-        "correctAnswer": "Cinnamon Bun",
-        "image": "https://64.media.tumblr.com/b8f405fdef94b812eeef4a911f155131/2dfe234c0c940376-0b/s2048x3072/f159a7e575a48bed4c9594ffe7c3ae4500c05596.jpg"
+        "question": "What car does LSP's best friend, Melissa, drive in the episode 'Trouble in Lumpy Space?'",
+        "option1": "1993 Honda Accord",
+        "option2": "1999 Bentley Azure Convertible",
+        "option3": "1993 Mercedes-Benz 300E",
+        "correctAnswer": "1999 Bentley Azure Convertible",
+        "image": "https://64.media.tumblr.com/3403b856a1efcca9e1d1e66364d607f8/342b0c03a0b7ad5b-80/s540x810/af77c84dd5fa14039bad69f9857054cb8bf53243.gif"
     },
     {
-        "question": "Who is Memow trying to kill in hopes of becoming a full Assassin in the Assassin's Guild?",
-        "option1": "Wildberry Princess",
+        "question": "What instrument does Cake play?",
+        "option1": "Cello",
+        "option2": "Violin",
+        "option3": "Hammered dulcimer",
+        "correctAnswer": "Hammered dulcimer",
+        "image": "https://64.media.tumblr.com/d331da8f3a918ce8c2df65f59e6b4d1a/53676986efa91345-95/s640x960/16665423a21ae1b228ef6149a019745cdd0cdb01.gif"
+    },
+    {
+        "question": "Finn blames this character for his breakup with Flame Princess in 'Hoots'",
+        "option1": "Cosmic Owl",
+        "option2": "Ice King",
+        "option3": "Flame Princess",
+        "correctAnswer": "Cosmic Owl",
+        "image": "https://64.media.tumblr.com/9cde53c354cc3fa9d5a4d2171f3d620c/f89194b3fbf9f3bb-b5/s540x810/d8547e2bd8eaf655f89231b33050a7a72dce9bc0.gif"
+    },
+    {
+        "question": "Which is the correct order of the four-faced entitiy?",
+        "option1": "Glob Gob Grod Grob",
+        "option2": "Grob Gob Glob Grod",
+        "option3": "Gob Glob Grob Grod",
+        "correctAnswer": "Grob Gob Glob Grod",
+        "image": "https://64.media.tumblr.com/807f660b8054e37040cb40ca2132bba4/8e82665dbbaa9220-bd/s540x810/16877123c0f013e69fccee517da5cce3491031d7.gif"
+    },
+    {
+        "question": "BMO enjoys ______, despite not having a physical mouth",
+        "option1": "Olive bread",
+        "option2": "Cheese",
+        "option3": "Tea",
+        "correctAnswer": "Olive bread",
+        "image": "https://64.media.tumblr.com/9e60cd7245149bd3e41a24e153b1e101/f8283c008c22eaf6-e7/s2048x3072/2f6d5810676995549da7ae6078b14cd8e573990f.jpg"
+    },
+    {
+        "question": "Who is one of Ice King's least favorite princesses?",
+        "option1": "Lumpy Space Princess",
+        "option2": "Slime Princess",
+        "option3": "Hot Dog Princess",
+        "correctAnswer": "Lumpy Space Princess",
+        "image": "https://64.media.tumblr.com/2fde8d88d361ac77d93d77cd0ac8756b/e8b7a2e01362b0af-c4/s540x810/17284267de61d6c69d7d7dcde1cfe406d393ee2b.gif"
+    },
+    {
+        "question": "Both Jake and Finn are afraid of ______",
+        "option1": "The dark",
+        "option2": "Spiders",
+        "option3": "Worms",
+        "correctAnswer": "Spiders",
+        "image": "https://64.media.tumblr.com/2e36fdd9515cdb028f11e24795b16af5/3e56384822911031-0b/s2048x3072/ef706da6cd24e71a0a963539b7974a8f285e3bce.gif"
+    },
+    {
+        "question": "What is Lady Rainicorn's favorite drink?",
+        "option1": "Iced latte",
+        "option2": "Tea",
+        "option3": "Apple juice",
+        "correctAnswer": "Iced latte",
+        "image": "https://64.media.tumblr.com/454d2adc73d0aec9eb6ad03a348c1faf/b6b7d0fb48b4e9bb-b3/s540x810/65acc9cc9010d17e5cf79340899cb8f5dac74cc9.gif"
+    },
+    {
+        "question": "Who is currently the only main character in the series whose parent(s) have not yet been introduced? ",
+        "option1": "Princess Bubblegum",
+        "option2": "Ice King",
+        "option3": "Finn",
+        "correctAnswer": "Ice King",
+        "image": "https://64.media.tumblr.com/476c9a8e9f05f1f2c96768d2366fbf2e/81cbf87c82e58f8b-d1/s540x810/44b844e1f05fce14fe2a2da5fb1ba81cf538633f.gif"
+    },
+    {
+        "question": "What is Jake's favorite food?",
+        "option1": "Hamburger",
+        "option2": "Sushi",
+        "option3": "Ice cream",
+        "correctAnswer": "Ice cream",
+        "image": "https://static.wikia.nocookie.net/adventuretimewithfinnandjake/images/f/f2/Titlecard_S5E6_jakethedad.png/revision/latest/scale-to-width-down/1000?cb=20210502070849"
+    },
+    {
+        "question": "These two characters are siblings",
+        "option1": "Magic Man and Glob",
+        "option2": "Finn and Jake",
+        "option3": "Finn and Susan",
+        "correctAnswer": "Magic Man and Glob",
+        "image": "https://64.media.tumblr.com/8c7ab5d58544b320ef7e068288efa474/7c7010f810f4fd72-e6/s540x810/f7fad6fc22dac946a192cfa913e6fe81ed3a016d.gif"
+    },
+    {
+        "question": "This is the only known princess to have invaded another kingdom by herself",
+        "option1": "Princess Bubblegum",
         "option2": "Flame Princess",
-        "option3": "Hot-Dog Princess",
-        "correctAnswer": "Wildberry Princess",
-        "image": "https://64.media.tumblr.com/00defc26e375207883ec02d2adc95276/58f6ce6f8ca04d72-d3/s540x810/28f80f309a0de4d3dc6465c08d06523479bcbf48.gif"
+        "option3": "Slime Princess",
+        "correctAnswer": "Flame Princess",
+        "image": "https://64.media.tumblr.com/80627f435b132fc56b02acf731d436f8/56792b5999715785-7f/s540x810/577237d4ba1a38d6b5f35c727f2a167fc1b57a31.gif"
     },
     {
-        "question": "What happens to Finn's arm in 'Escape From the Citadel'?",
-        "option1": "It's ripped off",
-        "option2": "It gets scratched",
-        "option3": "Nothing",
-        "correctAnswer": "It's ripped off",
-        "image": "https://64.media.tumblr.com/e00fa9ee6940e22f9df6cb8397fc2ccd/27efe946744ec381-67/s540x810/769afcdb7623da00bd6f40c980edec0209f1d090.gif"
-    },
-    {
-        "question": "This character lives underground and asked Finn and Jake to help fight off Lub Glubs. Who is it?",
+        "question": "This character gets lucid dreams when she eats tomatoes",
         "option1": "Marceline",
-        "option2": "Starchie",
-        "option3": "Susan Strong",
-        "correctAnswer": "Susan Strong",
-        "image": "https://64.media.tumblr.com/ff4b8b536cdedcbc02902ae8ccc58b5b/342b0c03a0b7ad5b-69/s540x810/25345bbc2f5da212ac0cd2809988640535ab22c4.gif"
+        "option2": "Treetrunks",
+        "option3": "LSP",
+        "correctAnswer": "Marceline",
+        "image": "https://64.media.tumblr.com/185a4983bf2edda27647916c8c6a721d/d098ebf236c9dd0d-df/s540x810/6e23dbd98e0306facaba8ccea6d22022796fcca8.gif"
     },
     {
-        "question": "What is the name of Jake's brother?",
-        "option1": "Charlie",
-        "option2": "Jermaine",
-        "option3": "T.V.",
-        "correctAnswer": "Jermaine",
-        "image": "https://64.media.tumblr.com/ce43a925d727a43f57e0326fab1c3d71/fdd78d4318f3f90e-e7/s500x750/afe3e26fed18b9dad2f0e8d8d7acacc2c52dcfcf.gif"
+        "question": "What is the name of Marceline's zombie poodle?",
+        "option1": "Zoodle",
+        "option2": "Schwabl",
+        "option3": "Vampy",
+        "correctAnswer": "Schwabl",
+        "image": "https://64.media.tumblr.com/0dc6b5e5722ec9e15922869e5747750b/e2668d06a3a36190-b2/s540x810/22af6e4f60cdeb20af97a4f1ba10b1ad3f38a015.gif"
     },
     {
-        "question": "Which company originally passed on Adventure Time before Cartoon Network picked it up?",
-        "option1": "Disney",
-        "option2": "Warner Bros",
-        "option3": "Nickelodeon",
-        "correctAnswer": "Nickelodeon",
-        "image": "https://64.media.tumblr.com/16ca738b13a066063a962c60d37ae35e/06b703ac241d5964-b3/s500x750/607342abcc7bf64c555e5fe34c160ab360b5f58e.gif"
+        "question": "What is Princess Bubblegum's first name?",
+        "option1": "Bonnie",
+        "option2": "Hubba Bubba",
+        "option3": "Bonnibel",
+        "correctAnswer": "Bonnibel",
+        "image": "https://64.media.tumblr.com/936d3ba55003d22e19bb98a54b56f441/75d93e5f2acc8c84-95/s1280x1920/9daf49015b6fcaa6415cb13b662706500044a37a.jpg"
     },
     {
-        "question": "Which character does Niki Yang voice besides BMO in Adventure Time?",
-        "option1": "Treetrunks",
-        "option2": "Princess Bubblegum",
-        "option3": "Lady Rainicorn",
-        "correctAnswer": "Lady Rainicorn",
-        "image": "https://64.media.tumblr.com/887036579ace2d6ae5c97b32d9f06dce/bad8d5324f328394-04/s540x810/f114424f72c50dd2e765faddab23cd510116b027.gif"
+        "question": "Which kingdom is governed as a totalitarian dictatorship?",
+        "option1": "Candy Kingdom",
+        "option2": "Castle Lemongrab",
+        "option3": "Slime Kingdom",
+        "correctAnswer": "Castle Lemongrab",
+        "image": "https://64.media.tumblr.com/14acb58b74a5913085309e73c217b41a/753bd5eb5590ab15-a1/s540x810/df4ebdefa50405084d3c7cd9f49b749c4fe2aa32.gif"
+    },
+    { 
+        "question": "This easter egg is a running gag facial expression meant to resemble the show's lead character designer. You can see the expression in 'It Came from The Nightosphere' and 'Storytelling'",
+        "option1": "Phil face",
+        "option2": "Pen face",
+        "option3": "I can't think of a third option right now",
+        "correctAnswer": "Phil face",
+        "image": "https://64.media.tumblr.com/24d177d59ffa24245524850fbbe7bbee/8ab19d70d97eeb38-cc/s540x810/b8c722d11852074b904048cee61719f4e1debbc0.gif"
     },
     {
-        "question": " Which miniseries focuses on Marceline and her backstory in Adventure Time?",
-        "option1": "Stakes",
-        "option2": "Marceline the Vampire Queen",
-        "option3": "Marceline's Adventures",
-        "correctAnswer": "Stakes",
-        "image": "https://64.media.tumblr.com/280b77887cdd2ab6688edd4941da681f/247569e989fbea23-90/s250x400/9feedbbdc0b44d2f26f3b4f6d04645546cb06c6c.gif"
+        "question": "In 'The Chamber of Frozen Blades' which phobia is Finn shown to have?",
+        "option1": "Acrophobia (fear of heights)",
+        "option2": "Cleithrophobia (fear of being trapped)",
+        "option3": "Frigophobia (fear of coldness)",
+        "correctAnswer": "Cleithrophobia (fear of being trapped)",
+        "image": "https://static.wikia.nocookie.net/adventuretimewithfinnandjake/images/c/cb/Titlecard_S2E11_thechamberoffrozenblades.png/revision/latest/scale-to-width-down/1000?cb=20210410115429"
     },
     {
-        "question": "What are the names of gender-swapped Finn and Jake featured in a spin-off of the same name?",
-        "option1": "Fionna and Cake",
-        "option2": "Fiona and Cake",
-        "option3": "Fionna and Coke",
-        "correctAnswer": "Fionna and Cake",
-        "image": "https://64.media.tumblr.com/6767d6b8fff29130a390498aae8a1dde/1fa4f1ff7e166e00-03/s540x810/c6077f38ed1f3b59f495ca2127a217bc4bc91b20.gif"
+        "question": "As revealed in 'Simon Petrikov,' this character is a fan of the Fionna and Cake stories",
+        "option1": "T.V.",
+        "option2": "Jake",
+        "option3": "Finn",
+        "correctAnswer": "T.V.",
+        "image": "https://64.media.tumblr.com/c1f6882e383b0e68baa9885655592934/390ab2de6e1ef9cf-a0/s500x750/afd33b36fae502b6a8a53a5cdb4beee3e19c574c.gif"
     },
     {
-        "question": "What character is shown to be lonesome and alive thousands of years ahead of the original timeline?",
-        "option1": "Lemonhope",
-        "option2": "Starchie",
-        "option3": "Root Beer Guy",
-        "correctAnswer": "Lemonhope",
-        "image": "https://64.media.tumblr.com/edc52e71a1ea5b05ea77b08a6ca4f357/524f5e87bf632c9d-bf/s640x960/a822db6d9815706119efc3649dc115afbbfaa813.gif"
-    },
-    {
-        "question": "Susan Strong lives with a colony of what type of beings?",
-        "option1": "Replies",
-        "option2": "Candy People",
-        "option3": "Fish People",
-        "correctAnswer": "Fish People",
-        "image": "https://i.pinimg.com/564x/1c/8e/e3/1c8ee3044db9120531b8f875fe0fcd37.jpg"
-    },
-    {
-        "question": "What are the numbers on the back of the Enchiridion?",
-        "option1": "7 9 18",
-        "option2": "8 13 21",
-        "option3": "1 21 31",
-        "correctAnswer": "8 13 21",
-        "image": "https://64.media.tumblr.com/79fdfc8da2a0d2fb82171d4b43923971/9830a1ed565a0931-4e/s1280x1920/d66e30dfe06a4c980da89e87d0e38f53d9b7ea46.png"
-    },
-    {
-        "question": "Where did Bonnie and Neddy come from?",
-        "option1": "Mother Gum",
-        "option2": "The woods",
-        "option3": "Candy",
-        "correctAnswer": "Mother Gum",
-        "image": "https://64.media.tumblr.com/4183dd971b2be3068615a1a2ec0e70e0/7638233bc5799713-90/s1280x1920/ceb1edace99277a84edf5a54fa07d9203b8d349e.png"
-    },
-    {
-        "question": "What was Jake's first wish in the Time Room?",
-        "option1": "A hot-dog",
-        "option2": "Soup",
-        "option3": "A sandwich",
-        "correctAnswer": "A sandwich",
+        "question": "This character is one of two that can't get a tattoo",
+        "option1": "Jake",
+        "option2": "Starchy",
+        "option3": "Princess Bubblegum",
+        "correctAnswer": "Princess Bubblegum",
         "image": "https://64.media.tumblr.com/68f4225ea496fc7cf0d7580d86a50a90/81db18a432c0ae96-db/s500x750/77e89d7fc21c91d8cd4f34db45656b91585a9d46.gif"
     },
     {
-        "question": "What is Lemonhope's full name?",
-        "option1": "Tiny Lemon Fella",
-        "option2": "BadLemonNoHope",
-        "option3": "LemonHope",
-        "correctAnswer": "BadLemonNoHope",
-        "image": "https://static1.colliderimages.com/wordpress/wp-content/uploads/2023/09/lemongrab-feature.jpg"
-    },
-    {
-        "question": "Which character sings the end credits song that plays at the end of most episodes?",
-        "option1": "Starchie",
-        "option2": "Music Hole",
-        "option3": "Marceline",
-        "correctAnswer": "Music Hole",
-        "image": "https://64.media.tumblr.com/53869647f10639c25d3bc0ae9b6b1c06/f471dc76738b9360-ab/s500x750/4a7e489a0cbb8f4c14197256ccf01f2eddde7782.gif"
-    },
-    {
-        "question": "Who does Princess Bubblegum become in Ice King's fictional story: Fionna and Cake?",
-        "option1": "Princess Doubble-Bubble",
-        "option2": "Prince Gumball",
-        "option3": "Prince Hubba Bubba",
-        "correctAnswer": "Prince Gumball",
-        "image": "https://64.media.tumblr.com/77041cc42a05d6ca88ba91bc044115ac/396377c8f68e2be7-16/s640x960/a8fdb03d696781c69e0f71ddba5fd93222766769.png"
-    },
-    {
-        "question": "Who voices Marshall Lee?",
-        "option1": "Donald Glover",
-        "option2": "Troy Barnes",
-        "option3": "Aaron Davis",
-        "correctAnswer": "Donald Glover",
+        "question": "This character is two of two that also can't get a tattoo",
+        "option1": "BMO",
+        "option2": "Marceline",
+        "option3": "Finn",
+        "correctAnswer": "Marceline",
         "image": "https://64.media.tumblr.com/320aca86e92e704fc05152775f722ac3/8a6b25ee6fdf2d90-b2/s540x810/f7fd30103561251388e9cff8573a4d00182195a0.gif"
-    },
-    {
-        "question": "Who does Finn scapegoat as placeholder in the goblin kingdom to be king of the goblins instead of him?",
-        "option1": "Xergiok",
-        "option2": "Himself",
-        "option3": "Whisper Dan",
-        "correctAnswer": "Whisper Dan",
-        "image": "https://64.media.tumblr.com/2d2ffa486dd815ee7e2669ca5ed00ca0/4c8b54e8f68c29ca-51/s2048x3072/42f0f6d0c146c2c429d55aa5b6748a12c32d6c18.png"
-    },
-    {
-        "question": "What's Finn's favorite food?",
-        "option1": "Meatloaf",
-        "option2": "Chilli cheese fries",
-        "option3": "Beans",
-        "correctAnswer": "Meatloaf",
-        "image": "https://64.media.tumblr.com/23a9757761ce191184a424d128f0d9c6/ac333163f6cce8a7-c1/s1280x1920/0d0ff8f457f9d45bf6c7aca3d23e9f124d3b8e4c.png"
-    },
-    {
-        "question": "What's the name of Ice King's heart?",
-        "option1": "Simon",
-        "option2": "Ricardo",
-        "option3": "Cardio",
-        "correctAnswer": "Ricardo",
-        "image": "https://64.media.tumblr.com/5cf89a4499b3ccff018b9f6822200334/ac333163f6cce8a7-bb/s1280x1920/bfd77a9f7edd53a786909dde3dce57620b789553.png"
-    },
-    {
-        "question": "Jake is mentioned to be a writer of a newspaper column, what's the name of it?",
-        "option1": "The Untamed Scoundrel",
-        "option2": "Jake's Corner",
-        "option3": "Begs The Question",
-        "correctAnswer": "Begs The Question",
-        "image": "https://64.media.tumblr.com/d5ab872c3b49278a2016fdbf3af61570/ac333163f6cce8a7-c7/s1280x1920/8c495bca2ce309f875420abad1b5eda251605c32.png"
     },
     {
         "question": "In the episode 'The Silent King,' Jake reveals that his insides were cursed to smell like _______ by a wizard.",
@@ -255,124 +200,7 @@
         "option3": "Spoiled Meat",
         "correctAnswer": "Vanilla",
         "image": "https://64.media.tumblr.com/13ec44ac3e1901d0329ff2139f534a29/ac333163f6cce8a7-ca/s1280x1920/6690ec2581906d43b1e691ba4ea97b0afd94192e.png"
-    },
-    {
-        "question": "Thanks for the Crabapples, _______",
-        "option1": "Gunter",
-        "option2": "Abracadaniel",
-        "option3": "Giuseppe",
-        "correctAnswer": "Giuseppe",
-        "image": "https://64.media.tumblr.com/6b34be57ef44f63345f4479092d60c02/34e49799c3fa05dc-db/s2048x3072/d8fa5c67e4c14cd9c1963ff168499028252d6be0.png"
-    },
-    {
-        "question": "What is BMO's prized possesion?",
-        "option1": "Their butt",
-        "option2": "Their controller",
-        "option3": "Football",
-        "correctAnswer": "Their controller",
-        "image": "https://64.media.tumblr.com/9e60cd7245149bd3e41a24e153b1e101/f8283c008c22eaf6-e7/s2048x3072/2f6d5810676995549da7ae6078b14cd8e573990f.jpg"
-    },
-    {
-        "question": "Who's Moe's favorite MO",
-        "option1": "BMO",
-        "option2": "AMO",
-        "option3": "CMO",
-        "correctAnswer": "BMO",
-        "image": "https://64.media.tumblr.com/cd624b6ffcf16bbd2fdb029bb88eb786/331fb1b2669607d0-63/s1280x1920/2313763f76ce48093987352dbdc2456da94a779f.png"
-    },
-    {
-        "question": "Which character is NOT genderbent in the Adventure Time spinoff, Fionna and Cake?",
-        "option1": "BMO",
-        "option2": "Jake",
-        "option3": "Lady Rainicorn",
-        "correctAnswer": "BMO",
-        "image": "https://64.media.tumblr.com/09bfe67dd26fa431bb927d41946e800e/e95172bf41da93e0-27/s2048x3072/3320d7b2260cc53ec050e87af53af018b5e444e6.pnj"
-    },
-    {
-        "question": "Which historical figure can be seen in a picture with Hunson Abadeer in 'Return to the Nightosphere?'",
-        "option1": "Billy",
-        "option2": "Abraham Lincoln",
-        "option3": "George Washington",
-        "correctAnswer": "Abraham Lincoln",
-        "image": "https://static.wikia.nocookie.net/adventuretimewithfinnandjake/images/3/32/Titlecard_S4E5_returntothenightosphere.png/revision/latest?cb=20210501174148"
-    },
-    {
-        "question": "When Hunson Abadeer says: 'by far, the most evil thing I've encountered', which character's he saying it about?",
-        "option1": "The Lich",
-        "option2": "Gunter",
-        "option3": "LSP",
-        "correctAnswer": "Gunter",
-        "image": "https://64.media.tumblr.com/02580dfa737043e3a576a945bd4d9d02/42f5c92642f2a3b4-67/s640x960/0f5fe1fa3be8ee1daf6fe6561193bebe7a044c9f.png"
-    },
-    {
-        "question": "This character likes to 'smash bottles and eat socks'",
-        "option1": "Ice King",
-        "option2": "Gunter",
-        "option3": "Jake",
-        "correctAnswer": "Gunter",
-        "image": "https://64.media.tumblr.com/13fca9c61047400797805bdc35d62c86/216e773be9759657-dd/s640x960/32ec80028a9bad650c32941545e8be7f91a7bd22.png"
-    },
-    {
-        "question": "What is Finn's favorite color?'",
-        "option1": "Baby blue 'boy style'",
-        "option2": "Green",
-        "option3": "White",
-        "correctAnswer": "Baby blue 'boy style'",
-        "image": "https://64.media.tumblr.com/6202b1d838e00fb51fef77a98777818f/ac333163f6cce8a7-aa/s1280x1920/e01701324c6b95ec610854b043f5c131882df446.png"
-    },
-    {
-        "question": "Who is Finn's first and former girlfriend?",
-        "option1": "Princess Bubblegum",
-        "option2": "Flame Princess",
-        "option3": "Wildberry Princess",
-        "correctAnswer": "Flame Princess",
-        "image": "https://64.media.tumblr.com/fd8420a7ee0e185d16b2819cbbce9b3c/74f3370413953e97-41/s640x960/6ce17155d1fb59ace0b5ef0c35f5c6454ec4bab5.png"
-    },
-    {
-        "question": "What is discovered to have been one of Finn's past lives?",
-        "option1": "A Rock",
-        "option2": "A Patch of Grass",
-        "option3": "A Comet",
-        "correctAnswer": "A Comet",
-        "image": "https://64.media.tumblr.com/2181679d07a364f8084279eb63442ba4/529ae7e213ed1043-90/s2048x3072/a2d4a65bf118def5aa4e83f2db6670931f2fe313.png"
-    },
-    {
-        "question": "Which character (at least to some extent) is red-green colorblind?",
-        "option1": "Jake",
-        "option2": "Finn",
-        "option3": "Ice King",
-        "correctAnswer": "Finn",
-        "image": "https://64.media.tumblr.com/604a5052e77f7201bb226a214a8001db/49a305e933544fe4-6b/s2048x3072/9f63f130401d8408ef7c1c8c347234a7fa203726.jpg"
-    },
-    {
-        "question": "How many ex-husbands does Tree Trunks have?",
-        "option1": "2",
-        "option2": "3",
-        "option3": "4",
-        "correctAnswer": "3",
-        "image": "https://64.media.tumblr.com/3856c18db72c1907a68207d25ee8839a/ac333163f6cce8a7-09/s1280x1920/1709bfa7d7082ac18766e13eb1161b9a2eac86d0.png"
-    },
-    {
-        "question": "In 'The Suitor,' one of the Gumball Guardians refers to a character as the 'Dark One', who are they referring to?'",
-        "option1": "Gunter",
-        "option2": "GOLB",
-        "option3": "Peppermint Butler",
-        "correctAnswer": "Peppermint Butler",
-        "image": "https://64.media.tumblr.com/64e41f15c58baf628d8292aff5d49389/ac333163f6cce8a7-0c/s1280x1920/60a08978e05b53381c3bd2c093e90b0489b45175.png"
-    },
-    {
-        "question": "What is Peppermint Butler's gender-swapped character in Fionna and Cake?'",
-        "option1": "Candy Butler",
-        "option2": "Butterscotch Butler",
-        "option3": "Spearmint Butler",
-        "correctAnswer": "Butterscotch Butler",
-        "image": "https://64.media.tumblr.com/dfbcee48b633b1f74e1a7fefda089798/30c0f1bee912def6-d8/s1280x1920/1607cd3f0635d68340de67770b8d772dbcc44b48.png"
     }
-
-
-
-
-
 
 ]
 

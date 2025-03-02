@@ -67,7 +67,7 @@ function shuffleArray(array) {
 }
 
 async function sendTriviaQuestion() {
-  const channel = client.channels.cache.get("945713353186234378"); // currently: NV general
+  const channel = client.channels.cache.get("1138596262673916008"); // currently: emotes general
 
   if (triviaQuestions.length === 0) return;
   const randomIndex = Math.floor(Math.random() * triviaQuestions.length);
@@ -180,7 +180,7 @@ async function sendTriviaQuestion() {
 // Bot's online
 client.once(Events.ClientReady, (readyClient) => {
   console.log(`Ready! Logged in as ${readyClient.user.tag}`);
-  client.user.setActivity('Return to the Nightosphere', { type: ActivityType.Watching });
+  client.user.setActivity('It Came From The Nightosphere', { type: ActivityType.Watching });
   setInterval(async () => {
     await sendTriviaQuestion();
 }, 25_200_000);    //  7 hrs = 25_200_000
